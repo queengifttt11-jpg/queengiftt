@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 2nd Monthsary 💗</title>
+
+<link
+  href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+>
+
+<style>
+
+/* =====================================================
+   HAPPY 2ND MONTHSARY
+   QUEENGIFT TEMPLATE
+===================================================== */
+
+:root {
+  --pink: #f8c9d9;
+  --pink-dark: #c87599;
+  --pink-light: #fff7fb;
+  --text: #704b5d;
+  --border: #f3c3d5;
+}
+
+/* ================= RESET ================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  background: #f6d9e5;
+
+  font-family: 'Fredoka', sans-serif;
+  color: var(--text);
+
+  overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.app {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(
+      rgba(255, 239, 248, .72),
+      rgba(255, 239, 248, .72)
+    ),
+    url("background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ================= CONTAINER ================= */
+
+.phone {
+  width: 100%;
+  max-width: 360px;
+  min-height: 500px;
+
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  overflow: hidden;
+  position: relative;
+
+  box-shadow: none;
+}
+
+/* ================= HALAMAN ================= */
+
+.page {
+  display: none;
+
+  width: 100%;
+  min-height: 500px;
+
+  padding: 14px 18px;
+
+  text-align: center;
+
+  position: relative;
+
+  animation: fade .45s ease;
+}
+
+.page.active {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+}
+
+/* ================= PAGE 1 ================= */
+
+#page1 {
+  background: rgba(255, 247, 251, .94);
+
+  border: 3px solid var(--border);
+  border-radius: 28px;
+
+  height: 500px;
+  min-height: 500px;
+
+  box-shadow:
+    0 15px 45px rgba(170, 90, 120, .15);
+}
+
+/* ================= PAGE 2-8 ================= */
+
+#page2,
+#page3,
+#page4,
+#page5,
+#page6,
+#page7,
+#page8 {
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+/* ================= ANIMASI ================= */
+
+@keyframes fade {
+
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+/* ================= BACKGROUND HIASAN ================= */
+
+.bg {
+  position: fixed;
+
+  inset: 0;
+
+  pointer-events: none;
+
+  overflow: hidden;
+
+  opacity: .7;
+}
+
+.bg span {
+  position: absolute;
+
+  color: #f4c5d8;
+
+  font-size: 24px;
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.bg span:nth-child(1) {
+  top: 8%;
+  left: 8%;
+}
+
+.bg span:nth-child(2) {
+  top: 20%;
+  right: 8%;
+
+  animation-delay: 1s;
+}
+
+.bg span:nth-child(3) {
+  top: 45%;
+  left: 5%;
+
+  animation-delay: 2s;
+}
+
+.bg span:nth-child(4) {
+  top: 60%;
+  right: 5%;
+
+  animation-delay: .5s;
+}
+
+.bg span:nth-child(5) {
+  bottom: 10%;
+  left: 12%;
+
+  animation-delay: 1.5s;
+}
+
+.bg span:nth-child(6) {
+  bottom: 18%;
+  right: 15%;
+
+  animation-delay: 2.5s;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-5deg);
+  }
+
+  50% {
+    transform:
+      translateY(-12px)
+      rotate(5deg);
+  }
+
+}
+
+/* ================= TEKS ================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 26px;
+
+  line-height: 1.15;
+
+  color: var(--pink-dark);
+
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 22px;
+
+  line-height: 1.25;
+
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+
+  line-height: 1.5;
+
+  margin-bottom: 10px;
+}
+
+.small {
+  font-size: 13px;
+
+  opacity: .75;
+}
+
+/* ================= FOTO ================= */
+
+.photo {
+  width: 100%;
+
+  height: 125px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  border: 4px solid white;
+
+  box-shadow:
+    0 8px 20px rgba(190, 110, 140, .12);
+
+  margin-bottom: 10px;
+}
+
+.character {
+  width: 150px;
+  height: 150px;
+
+  object-fit: contain;
+
+  margin: 10px auto;
+
+  display: block;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+  background: #f8c5d8;
+
+  color: #9b5d79;
+
+  border: 2px solid #efb3ca;
+
+  border-radius: 30px;
+
+  padding: 10px 20px;
+
+  font-family: 'Fredoka', sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  box-shadow:
+    0 5px 12px rgba(190, 110, 140, .1);
+
+  transition: .2s;
+
+  margin: 4px;
+
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+
+  background: #f4b7ce;
+}
+
+.btn:active {
+  transform: scale(.96);
+}
+
+.btn.white {
+  background: white;
+
+  border-color: #f3d1df;
+}
+
+/* ================= PASSWORD ================= */
+
+.password-title {
+  margin-top: 2px;
+}
+
+.password-title h1 {
+  font-size: 23px;
+
+  line-height: 1.15;
+
+  margin-bottom: 6px;
+}
+
+.password-title p {
+  font-size: 14px;
+
+  line-height: 1.4;
+
+  margin-bottom: 8px;
+}
+
+/* ================= PASSWORD DISPLAY ================= */
+
+.pass-display {
+  font-size: 19px;
+
+  letter-spacing: 6px;
+
+  color: #d07c9e;
+
+  height: 25px;
+
+  margin: 4px 0 12px;
+}
+
+/* ================= KEYPAD ================= */
+
+.keypad {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 8px;
+
+  max-width: 300px;
+
+  margin: auto;
+}
+
+.key {
+  height: 43px;
+
+  border-radius: 13px;
+
+  background: #fff;
+
+  border: 2px solid #f4d5e1;
+
+  color: #9a637b;
+
+  font-family: 'Fredoka', sans-serif;
+
+  font-size: 18px;
+
+  box-shadow:
+    0 4px 8px rgba(180, 100, 130, .05);
+
+  transition: .15s;
+
+  cursor: pointer;
+}
+
+.key:hover {
+  background: #fff0f6;
+}
+
+.key:active {
+  transform: scale(.94);
+
+  background: #f8d4e2;
+}
+
+/* ================= HINT ================= */
+
+.hint {
+  margin-top: 12px;
+
+  font-size: 13px;
+
+  color: #bd7c99;
+}
+
+/* ================= OPTIONS ================= */
+
+.options {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 6px;
+
+  margin-top: 14px;
+}
+
+.options .btn {
+  font-size: 13px;
+
+  padding: 10px 14px;
+}
+
+/* ================= MESSAGE ================= */
+
+.message-box {
+  background:
+    rgba(255, 255, 255, .72);
+
+  border: 2px solid #f4d2df;
+
+  border-radius: 22px;
+
+  padding: 18px 16px;
+
+  text-align: left;
+
+  box-shadow:
+    0 8px 20px rgba(180, 100, 130, .06);
+
+  margin-top: 12px;
+
+  max-height: 310px;
+
+  overflow-y: auto;
+}
+
+.message-box p {
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  margin-bottom: 14px;
+}
+
+.message-box p:last-child {
+  margin-bottom: 0;
+}
+
+/* ================= HEART ================= */
+
+.heart {
+  position: fixed;
+
+  bottom: -40px;
+
+  left: 0;
+
+  font-size: 20px;
+
+  pointer-events: none;
+
+  z-index: 999;
+
+  animation:
+    loveFloat 5s ease-in forwards;
+
+  filter:
+    drop-shadow(
+      0 3px 5px
+      rgba(220, 120, 160, .15)
+    );
+}
+
+@keyframes loveFloat {
+
+  0% {
+
+    transform:
+      translateY(0)
+      translateX(0)
+      rotate(0deg)
+      scale(.5);
+
+    opacity: 0;
+  }
+
+  15% {
+
+    opacity: 1;
+
+    transform:
+      translateY(-80px)
+      translateX(5px)
+      rotate(-10deg)
+      scale(1);
+  }
+
+  40% {
+
+    transform:
+      translateY(-280px)
+      translateX(-25px)
+      rotate(15deg)
+      scale(1.1);
+  }
+
+  70% {
+
+    transform:
+      translateY(-500px)
+      translateX(25px)
+      rotate(-15deg)
+      scale(.9);
+
+    opacity: .9;
+  }
+
+  100% {
+
+    transform:
+      translateY(-850px)
+      translateX(-10px)
+      rotate(25deg)
+      scale(.7);
+
+    opacity: 0;
+  }
+
+}
+
+/* ================= MUSIK ================= */
+
+.music-btn {
+  position: fixed;
+
+  bottom: 25px;
+  right: 25px;
+
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e89bb9;
+
+  color: white;
+
+  font-size: 23px;
+
+  z-index: 99;
+
+  border: none;
+
+  box-shadow:
+    0 5px 20px
+    rgba(200, 100, 140, .25);
+
+  display: none;
+
+  cursor: pointer;
+}
+
+.music-btn.show {
+  display: block;
+}
+
+.music-btn.playing {
+  animation:
+    spin 3s linear infinite;
+}
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 500px) {
+
+  .app {
+    padding: 0;
+  }
+
+  .phone {
+    width: 100%;
+
+    max-width: 360px;
+
+    min-height: 500px;
+  }
+
+  #page1 {
+
+    height: 500px;
+
+    min-height: 500px;
+
+    border-radius: 28px;
+  }
+
+  #page2,
+  #page3,
+  #page4,
+  #page5,
+  #page6,
+  #page7,
+  #page8 {
+
+    min-height: 500px;
+
+    padding: 14px 18px;
+  }
+
+  .photo {
+    height: 125px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .message-box {
+    padding: 18px 16px;
+  }
+
+}
+
+/* ================= HP KECIL ================= */
+
+@media (max-width: 380px) {
+
+  .phone {
+    max-width: 340px;
+  }
+
+  #page1 {
+
+    height: 500px;
+
+    min-height: 500px;
+  }
+
+  .page {
+    padding: 12px 14px;
+  }
+
+  .photo {
+    height: 115px;
+  }
+
+  .keypad {
+    gap: 7px;
+  }
+
+  .key {
+    height: 40px;
+
+    font-size: 17px;
+  }
+
+}
+
+/* ================= FOTO PAGE 1 ================= */
+
+#page1 .photo {
+
+  display: block;
+
+  width: 85px;
+  height: 85px;
+
+  object-fit: contain;
+
+  margin: 10px auto 12px;
+
+  border: none !important;
+
+  border-radius: 0 !important;
+
+  box-shadow: none !important;
+
+  background: transparent !important;
+
+  padding: 0 !important;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+<div class="phone">
+
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="bg">
+
+  <span>♡</span>
+
+  <span>✦</span>
+
+  <span>♡</span>
+
+  <span>✧</span>
+
+  <span>♡</span>
+
+  <span>✦</span>
+
+</div>
+
+
+<!-- =================================================
+     PAGE 1
+================================================== -->
+
+<section
+  class="page active"
+  id="page1"
+>
+
+<div class="content">
+
+  <div class="password-title">
+
+    <h1 id="page1Title"></h1>
+
+    <p id="page1Subtitle"></p>
+
+  </div>
+
+
+  <img
+    id="page1Photo"
+    class="photo"
+    alt="Foto kita"
+  >
+
+
+  <div
+    class="pass-display"
+    id="passDisplay"
+  >
+    ♡♡♡♡
+  </div>
+
+
+  <div class="keypad">
+
+    <button
+      class="key"
+      onclick="pressKey('1')"
+    >
+      1
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('2')"
+    >
+      2
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('3')"
+    >
+      3
+    </button>
+
+
+    <button
+      class="key"
+      onclick="pressKey('4')"
+    >
+      4
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('5')"
+    >
+      5
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('6')"
+    >
+      6
+    </button>
+
+
+    <button
+      class="key"
+      onclick="pressKey('7')"
+    >
+      7
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('8')"
+    >
+      8
+    </button>
+
+    <button
+      class="key"
+      onclick="pressKey('9')"
+    >
+      9
+    </button>
+
+
+    <button
+      class="key"
+      onclick="pressKey('0')"
+      style="grid-column:2"
+    >
+      0
+    </button>
+
+  </div>
+
+
+  <p
+    class="hint"
+    id="page1Hint"
+  ></p>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 2
+================================================== -->
+
+<section
+  class="page"
+  id="page2"
+>
+
+<div class="content">
+
+  <img
+    src="icon1.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h1
+    id="page2Title"
+    style="color:#333;"
+  ></h1>
+
+
+  <button
+    class="btn"
+    id="page2Button"
+    onclick="
+      nextPage(3);
+      startMusic();
+    "
+  ></button>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 3
+================================================== -->
+
+<section
+  class="page"
+  id="page3"
+>
+
+<div class="content">
+
+  <img
+    src="icon2.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h2
+    id="page3Title"
+  ></h2>
+
+
+  <div class="options">
+
+    <button
+      class="btn"
+      id="page3ButtonYes"
+      onclick="nextPage(4)"
+    ></button>
+
+
+    <button
+      class="btn white"
+      id="page3ButtonNo"
+      onclick="tease()"
+    ></button>
+
+  </div>
+
+
+  <p
+    class="small"
+    id="teaseText"
+  ></p>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 4
+================================================== -->
+
+<section
+  class="page"
+  id="page4"
+>
+
+<div class="content">
+
+  <img
+    src="icon3.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h2
+    id="page4Title"
+  ></h2>
+
+
+  <p
+    id="page4Text"
+  ></p>
+
+
+  <button
+    class="btn"
+    id="page4Button"
+    onclick="nextPage(5)"
+  ></button>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 5
+================================================== -->
+
+<section
+  class="page"
+  id="page5"
+>
+
+<div class="content">
+
+  <img
+    src="icon4.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h1
+    id="page5Title"
+  ></h1>
+
+
+  <p
+    id="page5Text"
+  ></p>
+
+
+  <button
+    class="btn"
+    id="page5Button"
+    onclick="nextPage(6)"
+  ></button>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 6
+================================================== -->
+
+<section
+  class="page"
+  id="page6"
+>
+
+<div class="content">
+
+  <h1
+    id="page6Title"
+    style="
+      font-family:'Fredoka';
+      color:#c87599;
+    "
+  ></h1>
+
+
+  <p
+    id="page6MusicText"
+    style="font-size:16px;"
+  ></p>
+
+
+  <button
+    class="btn"
+    onclick="startMusic()"
+  >
+    ♪ ♡ ✦
+  </button>
+
+
+  <div
+    class="message-box"
+    id="messageBox"
+  ></div>
+
+
+  <button
+    class="btn"
+    id="page6Button"
+    onclick="nextPage(7)"
+  ></button>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 7
+================================================== -->
+
+<section
+  class="page"
+  id="page7"
+>
+
+<div class="content">
+
+  <img
+    src="icon5.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h1
+    id="page7Title"
+  ></h1>
+
+
+  <p
+    id="page7Text1"
+  ></p>
+
+
+  <p
+    id="page7Text2"
+  ></p>
+
+
+  <button
+    class="btn"
+    id="page7Button"
+    onclick="nextPage(8)"
+  ></button>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     PAGE 8
+================================================== -->
+
+<section
+  class="page"
+  id="page8"
+>
+
+<div class="content">
+
+  <img
+    src="icon7.webp"
+    class="character"
+    alt="Karakter lucu"
+  >
+
+
+  <h1
+    id="page8Title"
+  ></h1>
+
+
+  <p
+    id="page8Text1"
+  ></p>
+
+
+  <p
+    id="page8Text2"
+    style="font-size:18px;"
+  ></p>
+
+
+  <button
+    class="btn"
+    id="page8Button"
+    onclick="location.reload()"
+  ></button>
+
+</div>
+
+</section>
+
+
+</div>
+
+</div>
+
+
+<!-- =================================================
+     AUDIO
+================================================== -->
+
+<audio
+  id="music"
+  loop
+></audio>
+
+
+<button
+  class="music-btn"
+  id="musicBtn"
+  onclick="toggleMusic()"
+>
+  ♪
+</button>
+
+
+<!-- =================================================
+     DATA DEFAULT TEMPLATE
+================================================== -->
+
+<script src="data.js"></script>
+
+
+<script>
+
+/* =====================================================
+   QUEENGIFT DATA SYSTEM
+=====================================================
+
+   PRIORITAS DATA:
+
+   1. Data dari Admin
+   2. Data dari data.js
+
+   Jadi:
+
+   Admin isi     → gunakan Admin
+   Admin kosong  → gunakan data.js
+
+===================================================== */
+
+
+/* =====================================================
+   CEK DATA.JS
+===================================================== */
+
+if (typeof order === "undefined") {
+
+  alert(
+    "data.js tidak ditemukan atau mengalami error."
+  );
+
+  throw new Error(
+    "Object 'order' tidak ditemukan."
+  );
+
+}
+
+
+/* =====================================================
+   AMBIL DATA DARI ADMIN
+===================================================== */
+
+let adminOrder = {};
+
+try {
+
+  const savedOrder =
+    localStorage.getItem("queengiftOrder");
+
+  if (savedOrder) {
+
+    adminOrder =
+      JSON.parse(savedOrder) || {};
+
+  }
+
+} catch (error) {
+
+  console.error(
+    "Gagal membaca data Admin:",
+    error
+  );
+
+  adminOrder = {};
+
+}
+
+
+/* =====================================================
+   FUNGSI FALLBACK
+===================================================== */
+
+function getValue(
+  adminValue,
+  defaultValue
+) {
+
+  /*
+    Kalau Admin mengisi data
+    → gunakan data Admin
+  */
+
+  if (
+    adminValue !== undefined &&
+    adminValue !== null &&
+    String(adminValue).trim() !== ""
+  ) {
+
+    return adminValue;
+
+  }
+
+
+  /*
+    Kalau Admin kosong
+    → gunakan data.js
+  */
+
+  return defaultValue;
+
+}
+
+
+/* =====================================================
+   FOTO FALLBACK
+===================================================== */
+
+function getPhoto() {
+
+  /*
+    Jika Admin nanti mengirim foto
+    dalam bentuk Data URL
+  */
+
+  if (
+    adminOrder.page1Photo &&
+    String(adminOrder.page1Photo).trim() !== ""
+  ) {
+
+    return adminOrder.page1Photo;
+
+  }
+
+
+  /*
+    Jika tidak ada
+    → gunakan foto bawaan data.js
+  */
+
+  return order.page1Photo || "icon6.webp";
+
+}
+
+
+/* =====================================================
+   MUSIK FALLBACK
+===================================================== */
+
+function getMusic() {
+
+  /*
+    Kalau Admin mengirim musik
+    dalam bentuk Data URL
+  */
+
+  if (
+    adminOrder.music &&
+    typeof adminOrder.music === "object" &&
+    adminOrder.music.data
+  ) {
+
+    return adminOrder.music.data;
+
+  }
+
+
+  /*
+    Kalau Admin mengirim path musik
+  */
+
+  if (
+    typeof adminOrder.music === "string" &&
+    adminOrder.music.trim() !== ""
+  ) {
+
+    return adminOrder.music;
+
+  }
+
+
+  /*
+    Kalau Admin tidak mengisi
+    → gunakan data.js
+  */
+
+  return order.music || "musik.mp3";
+
+}
+
+
+/* =====================================================
+   DATA FINAL
+===================================================== */
+
+const finalOrder = {
+
+
+  /* ===================================================
+     DATA DASAR
+  =================================================== */
+
+  customerName:
+    getValue(
+      adminOrder.customerName,
+      order.customerName
+    ),
+
+
+  recipientName:
+    getValue(
+      adminOrder.recipientName,
+      order.recipientName
+    ),
+
+
+  password:
+    getValue(
+      adminOrder.password,
+      order.password
+    ),
+
+
+  date:
+    getValue(
+      adminOrder.date,
+      order.date
+    ),
+
+
+  /* ===================================================
+     PAGE 1
+  =================================================== */
+
+  page1Photo:
+    getPhoto(),
+
+
+  page1Title:
+    getValue(
+      adminOrder.page1Title,
+      order.page1Title
+    ),
+
+
+  page1Subtitle:
+    getValue(
+      adminOrder.page1Subtitle,
+      order.page1Subtitle
+    ),
+
+
+  page1Hint:
+    getValue(
+      adminOrder.page1Hint,
+      order.page1Hint
+    ),
+
+
+  /* ===================================================
+     PAGE 2
+  =================================================== */
+
+  page2Title:
+    getValue(
+      adminOrder.page2Title,
+      order.page2Title
+    ),
+
+
+  page2Button:
+    getValue(
+      adminOrder.page2Button,
+      order.page2Button
+    ),
+
+
+  /* ===================================================
+     PAGE 3
+  =================================================== */
+
+  page3Title:
+    getValue(
+      adminOrder.page3Title,
+      order.page3Title
+    ),
+
+
+  page3ButtonYes:
+    getValue(
+      adminOrder.page3ButtonYes,
+      order.page3ButtonYes
+    ),
+
+
+  page3ButtonNo:
+    getValue(
+      adminOrder.page3ButtonNo,
+      order.page3ButtonNo
+    ),
+
+
+  page3Tease:
+    getValue(
+      adminOrder.page3Tease,
+      order.page3Tease
+    ),
+
+
+  /* ===================================================
+     PAGE 4
+  =================================================== */
+
+  page4Title:
+    getValue(
+      adminOrder.page4Title,
+      order.page4Title
+    ),
+
+
+  page4Text:
+    getValue(
+      adminOrder.page4Text,
+      order.page4Text
+    ),
+
+
+  page4Button:
+    getValue(
+      adminOrder.page4Button,
+      order.page4Button
+    ),
+
+
+  /* ===================================================
+     PAGE 5
+  =================================================== */
+
+  page5Title:
+    getValue(
+      adminOrder.page5Title,
+      order.page5Title
+    ),
+
+
+  page5Text:
+    getValue(
+      adminOrder.page5Text,
+      order.page5Text
+    ),
+
+
+  page5Button:
+    getValue(
+      adminOrder.page5Button,
+      order.page5Button
+    ),
+
+
+  /* ===================================================
+     PAGE 6
+  =================================================== */
+
+  page6Title:
+    getValue(
+      adminOrder.page6Title,
+      order.page6Title
+    ),
+
+
+  page6MusicText:
+    getValue(
+      adminOrder.page6MusicText,
+      order.page6MusicText
+    ),
+
+
+  message:
+    getValue(
+      adminOrder.message,
+      order.message
+    ),
+
+
+  page6Button:
+    getValue(
+      adminOrder.page6Button,
+      order.page6Button
+    ),
+
+
+  /* ===================================================
+     PAGE 7
+  =================================================== */
+
+  page7Title:
+    getValue(
+      adminOrder.page7Title,
+      order.page7Title
+    ),
+
+
+  page7Text1:
+    getValue(
+      adminOrder.page7Text1,
+      order.page7Text1
+    ),
+
+
+  page7Text2:
+    getValue(
+      adminOrder.page7Text2,
+      order.page7Text2
+    ),
+
+
+  page7Button:
+    getValue(
+      adminOrder.page7Button,
+      order.page7Button
+    ),
+
+
+  /* ===================================================
+     PAGE 8
+  =================================================== */
+
+  page8Title:
+    getValue(
+      adminOrder.page8Title,
+      order.page8Title
+    ),
+
+
+  page8Text1:
+    getValue(
+      adminOrder.page8Text1,
+      order.page8Text1
+    ),
+
+
+  page8Text2:
+    getValue(
+      adminOrder.page8Text2,
+      order.page8Text2
+    ),
+
+
+  page8Button:
+    getValue(
+      adminOrder.page8Button,
+      order.page8Button
+    ),
+
+
+  /* ===================================================
+     MUSIK
+  =================================================== */
+
+  music:
+    getMusic()
+
+};
+
+
+/* =====================================================
+   VARIABEL
+===================================================== */
+
+let currentPage = 1;
+
+let password = "";
+
+
+const correctPassword =
+  String(
+    finalOrder.password || "0909"
+  );
+
+
+const music =
+  document.getElementById("music");
+
+
+const musicBtn =
+  document.getElementById("musicBtn");
+
+
+/* =====================================================
+   SET MUSIK
+===================================================== */
+
+music.src =
+  finalOrder.music || "musik.mp3";
+
+music.volume = 0.7;
+
+
+/* =====================================================
+   LOAD DATA KE TEMPLATE
+===================================================== */
+
+function loadOrderData() {
+
+
+  /* ===================================================
+     PAGE 1
+  =================================================== */
+
+  document
+    .getElementById("page1Title")
+    .innerHTML =
+      finalOrder.page1Title;
+
+
+  document
+    .getElementById("page1Subtitle")
+    .innerHTML =
+      finalOrder.page1Subtitle;
+
+
+  document
+    .getElementById("page1Hint")
+    .innerHTML =
+      finalOrder.page1Hint;
+
+
+  document
+    .getElementById("page1Photo")
+    .src =
+      finalOrder.page1Photo;
+
+
+  /* ===================================================
+     PAGE 2
+  =================================================== */
+
+  document
+    .getElementById("page2Title")
+    .innerHTML =
+      finalOrder.page2Title;
+
+
+  document
+    .getElementById("page2Button")
+    .innerHTML =
+      finalOrder.page2Button;
+
+
+  /* ===================================================
+     PAGE 3
+  =================================================== */
+
+  document
+    .getElementById("page3Title")
+    .innerHTML =
+      finalOrder.page3Title;
+
+
+  document
+    .getElementById("page3ButtonYes")
+    .innerHTML =
+      finalOrder.page3ButtonYes;
+
+
+  document
+    .getElementById("page3ButtonNo")
+    .innerHTML =
+      finalOrder.page3ButtonNo;
+
+
+  /* ===================================================
+     PAGE 4
+  =================================================== */
+
+  document
+    .getElementById("page4Title")
+    .innerHTML =
+      finalOrder.page4Title;
+
+
+  document
+    .getElementById("page4Text")
+    .innerHTML =
+      finalOrder.page4Text;
+
+
+  document
+    .getElementById("page4Button")
+    .innerHTML =
+      finalOrder.page4Button;
+
+
+  /* ===================================================
+     PAGE 5
+  =================================================== */
+
+  document
+    .getElementById("page5Title")
+    .innerHTML =
+      finalOrder.page5Title;
+
+
+  document
+    .getElementById("page5Text")
+    .innerHTML =
+      finalOrder.page5Text;
+
+
+  document
+    .getElementById("page5Button")
+    .innerHTML =
+      finalOrder.page5Button;
+
+
+  /* ===================================================
+     PAGE 6
+  =================================================== */
+
+  document
+    .getElementById("page6Title")
+    .innerHTML =
+      finalOrder.page6Title;
+
+
+  document
+    .getElementById("page6MusicText")
+    .innerHTML =
+      finalOrder.page6MusicText;
+
+
+  document
+    .getElementById("messageBox")
+    .innerHTML =
+      finalOrder.message;
+
+
+  document
+    .getElementById("page6Button")
+    .innerHTML =
+      finalOrder.page6Button;
+
+
+  /* ===================================================
+     PAGE 7
+  =================================================== */
+
+  document
+    .getElementById("page7Title")
+    .innerHTML =
+      finalOrder.page7Title;
+
+
+  document
+    .getElementById("page7Text1")
+    .innerHTML =
+      finalOrder.page7Text1;
+
+
+  document
+    .getElementById("page7Text2")
+    .innerHTML =
+      finalOrder.page7Text2;
+
+
+  document
+    .getElementById("page7Button")
+    .innerHTML =
+      finalOrder.page7Button;
+
+
+  /* ===================================================
+     PAGE 8
+  =================================================== */
+
+  document
+    .getElementById("page8Title")
+    .innerHTML =
+      finalOrder.page8Title;
+
+
+  document
+    .getElementById("page8Text1")
+    .innerHTML =
+      finalOrder.page8Text1;
+
+
+  document
+    .getElementById("page8Text2")
+    .innerHTML =
+      finalOrder.page8Text2;
+
+
+  document
+    .getElementById("page8Button")
+    .innerHTML =
+      finalOrder.page8Button;
+
+
+  /* ===================================================
+     TITLE BROWSER
+  =================================================== */
+
+  document.title =
+    "Happy " +
+    (
+      finalOrder.date ||
+      "Monthsary"
+    ) +
+    " 💗";
+
+}
+
+
+/* =====================================================
+   JALANKAN DATA
+===================================================== */
+
+loadOrderData();
+
+
+/* =====================================================
+   PINDAH PAGE
+===================================================== */
+
+function nextPage(page) {
+
+  document
+    .querySelectorAll(".page")
+    .forEach(p => {
+
+      p.classList.remove("active");
+
+    });
+
+
+  const target =
+    document.getElementById(
+      "page" + page
+    );
+
+
+  if (!target) {
+    return;
+  }
+
+
+  target.classList.add("active");
+
+
+  currentPage = page;
+
+
+  if (page > 1) {
+
+    musicBtn
+      .classList
+      .add("show");
+
+  }
+
+
+  window.scrollTo(
+    0,
+    0
+  );
+
+
+  if (
+    page === 2 ||
+    page === 4 ||
+    page === 5 ||
+    page === 7 ||
+    page === 8
+  ) {
+
+    createHearts();
+
+  }
+
+}
+
+
+/* =====================================================
+   PASSWORD
+===================================================== */
+
+function pressKey(num) {
+
+  if (
+    password.length >= 4
+  ) {
+
+    return;
+
+  }
+
+
+  password += num;
+
+
+  document
+    .getElementById("passDisplay")
+    .textContent =
+
+      "●".repeat(
+        password.length
+      )
+
+      +
+
+      "♡".repeat(
+        4 - password.length
+      );
+
+
+  if (
+    password.length === 4
+  ) {
+
+    setTimeout(() => {
+
+
+      if (
+        password ===
+        correctPassword
+      ) {
+
+        nextPage(2);
+
+        createHearts();
+
+      }
+
+
+      else {
+
+        alert(
+          "salahh ayang 😭 coba lagi yaa!"
+        );
+
+
+        password = "";
+
+
+        document
+          .getElementById(
+            "passDisplay"
+          )
+          .textContent =
+            "♡♡♡♡";
+
+      }
+
+
+    }, 300);
+
+  }
+
+}
+
+
+/* =====================================================
+   MUSIK
+===================================================== */
+
+function startMusic() {
+
+  music
+    .play()
+    .then(() => {
+
+      musicBtn
+        .classList
+        .add("playing");
+
+    })
+    .catch(() => {
+
+      console.log(
+        "Autoplay diblokir browser."
+      );
+
+    });
+
+}
+
+
+function toggleMusic() {
+
+  if (
+    music.paused
+  ) {
+
+    startMusic();
+
+  }
+
+  else {
+
+    music.pause();
+
+    musicBtn
+      .classList
+      .remove("playing");
+
+  }
+
+}
+
+
+/* =====================================================
+   AUTOPLAY
+===================================================== */
+
+window.addEventListener(
+  "load",
+  () => {
+
+    startMusic();
+
+  }
+);
+
+
+document.addEventListener(
+  "click",
+  () => {
+
+    if (
+      music.paused
+    ) {
+
+      startMusic();
+
+    }
+
+  },
+  {
+    once: true
+  }
+);
+
+
+document.addEventListener(
+  "touchstart",
+  () => {
+
+    if (
+      music.paused
+    ) {
+
+      startMusic();
+
+    }
+
+  },
+  {
+    once: true
+  }
+);
+
+
+/* =====================================================
+   TOMBOL ISENG
+===================================================== */
+
+function tease() {
+
+  document
+    .getElementById("teaseText")
+    .textContent =
+
+      finalOrder.page3Tease ||
+
+      "ish, iseng mulu 😤 tap yang excited sekarang jugaa!";
+
+}
+
+
+/* =====================================================
+   LOVE BERTERBANGAN
+===================================================== */
+
+function createHearts() {
+
+  const hearts = [
+    "💗",
+    "♥︎",
+    "♡",
+    "♡"
+  ];
+
+
+  for (
+    let i = 0;
+    i < 18;
+    i++
+  ) {
+
+
+    setTimeout(
+      () => {
+
+
+        const heart =
+          document.createElement(
+            "div"
+          );
+
+
+        heart.className =
+          "heart";
+
+
+        heart.textContent =
+          hearts[
+            Math.floor(
+              Math.random() *
+              hearts.length
+            )
+          ];
+
+
+        heart.style.left =
+          (
+            Math.random() *
+            100
+          ) + "vw";
+
+
+        heart.style.fontSize =
+          (
+            14 +
+            Math.random() * 16
+          ) + "px";
+
+
+        heart.style.animationDuration =
+          (
+            4 +
+            Math.random() * 3
+          ) + "s";
+
+
+        heart.style.animationDelay =
+          (
+            Math.random() * .5
+          ) + "s";
+
+
+        document
+          .body
+          .appendChild(
+            heart
+          );
+
+
+        setTimeout(
+          () => {
+
+            heart.remove();
+
+          },
+          8000
+        );
+
+
+      },
+      i * 180
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   LOVE BERKALA
+===================================================== */
+
+setInterval(
+  () => {
+
+    if (
+      currentPage > 1
+    ) {
+
+      createHearts();
+
+    }
+
+  },
+  9000
+);
+
+</script>
+
+</body>
+
+</html>

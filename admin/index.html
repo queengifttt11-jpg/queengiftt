@@ -1,0 +1,3454 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  >
+
+  <title>QueenGift Admin</title>
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700&family=Fredoka:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    /* =========================================================
+       ROOT
+    ========================================================= */
+
+    :root {
+      --pink: #ff7fa8;
+      --pink-dark: #df638c;
+      --pink-light: #ff9fba;
+      --pink-soft: #fff1f6;
+      --pink-bg: #fff8fb;
+
+      --text: #4f3b43;
+      --text-dark: #49363e;
+      --text-soft: #947984;
+      --text-muted: #b59ca5;
+
+      --border: #f1dce4;
+      --border-soft: #f7e9ee;
+
+      --white: #ffffff;
+
+      --success: #5b9b76;
+      --danger: #bd6875;
+    }
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+
+    body {
+      min-height: 100vh;
+
+      font-family:
+        "Baloo 2",
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at top left,
+          rgba(255, 196, 215, .45),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at bottom right,
+          rgba(255, 225, 236, .7),
+          transparent 35%
+        ),
+        #fff7fa;
+
+      overflow-x: hidden;
+
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+    button,
+    input,
+    textarea,
+    select {
+      font-family: inherit;
+    }
+
+
+    button {
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+    }
+
+
+    input,
+    textarea,
+    select {
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .header {
+      width: 100%;
+
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+
+      background:
+        rgba(255, 255, 255, .92);
+
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+
+      border-bottom:
+        1px solid rgba(241, 220, 228, .85);
+    }
+
+
+    .header-inner {
+      width: 100%;
+      max-width: 760px;
+
+      margin: auto;
+
+      min-height: 64px;
+
+      padding:
+        10px 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 12px;
+    }
+
+
+    .logo {
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 24px;
+      font-weight: 600;
+
+      color: var(--pink);
+
+      letter-spacing: -.3px;
+
+      white-space: nowrap;
+    }
+
+
+    .logo span {
+      color: var(--pink-light);
+    }
+
+
+    .admin-badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 30px;
+
+      padding:
+        5px 11px;
+
+      border-radius: 999px;
+
+      background: var(--pink-soft);
+
+      color: var(--pink-dark);
+
+      font-size: 10px;
+      font-weight: 700;
+
+      letter-spacing: .3px;
+
+      white-space: nowrap;
+    }
+
+
+    /* =========================================================
+       MAIN
+    ========================================================= */
+
+    .container {
+      width: 100%;
+      max-width: 760px;
+
+      margin: auto;
+
+      padding:
+        22px 14px
+        calc(125px + env(safe-area-inset-bottom));
+    }
+
+
+    /* =========================================================
+       WELCOME
+    ========================================================= */
+
+    .welcome {
+      padding:
+        4px 3px 18px;
+    }
+
+
+    .welcome h1 {
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 28px;
+      font-weight: 500;
+
+      line-height: 1.15;
+
+      color: var(--text-dark);
+
+      letter-spacing: -.4px;
+    }
+
+
+    .welcome p {
+      margin-top: 6px;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+
+      color: var(--text-soft);
+    }
+
+
+    /* =========================================================
+       INFO BOX
+    ========================================================= */
+
+    .info-box {
+      position: relative;
+
+      padding:
+        14px 15px 14px 43px;
+
+      margin-bottom: 14px;
+
+      border:
+        1px solid #f1dbe4;
+
+      border-radius: 16px;
+
+      background:
+        rgba(255, 255, 255, .82);
+
+      color: #927481;
+
+      font-size: 11.5px;
+
+      line-height: 1.65;
+    }
+
+
+    .info-box::before {
+      content: "💡";
+
+      position: absolute;
+
+      left: 14px;
+      top: 14px;
+
+      font-size: 18px;
+    }
+
+
+    .info-box strong {
+      color: #765664;
+    }
+
+
+    /* =========================================================
+       CARD
+    ========================================================= */
+
+    .card {
+      width: 100%;
+
+      background:
+        rgba(255, 255, 255, .94);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 20px;
+
+      padding: 18px;
+
+      margin-bottom: 14px;
+
+      box-shadow:
+        0 5px 20px
+        rgba(137, 72, 96, .055);
+    }
+
+
+    /* =========================================================
+       CARD TITLE
+    ========================================================= */
+
+    .card-title {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 17px;
+    }
+
+
+    .card-icon {
+      width: 38px;
+      height: 38px;
+
+      min-width: 38px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ffe4ed,
+          #fff1f6
+        );
+
+      color: var(--pink);
+
+      font-size: 17px;
+    }
+
+
+    .card-title h2 {
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 18px;
+      font-weight: 500;
+
+      line-height: 1.2;
+
+      color: #553f47;
+    }
+
+
+    .card-title p {
+      margin-top: 2px;
+
+      color: #a98b96;
+
+      font-size: 11px;
+
+      line-height: 1.3;
+    }
+
+
+    /* =========================================================
+       GRID
+    ========================================================= */
+
+    .grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 14px;
+    }
+
+
+    .field {
+      min-width: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      gap: 6px;
+    }
+
+
+    .field.full {
+      grid-column:
+        1 / -1;
+    }
+
+
+    /* =========================================================
+       LABEL
+    ========================================================= */
+
+    label {
+      color: #705560;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      line-height: 1.3;
+    }
+
+
+    .optional {
+      color: #bca5ae;
+
+      font-size: 10px;
+
+      font-weight: 500;
+
+      margin-left: 2px;
+    }
+
+
+    /* =========================================================
+       INPUT
+    ========================================================= */
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      border:
+        1px solid #ead8df;
+
+      border-radius: 12px;
+
+      background: #fffdfd;
+
+      color: #503d45;
+
+      outline: none;
+
+      font-size: 13px;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+    }
+
+
+    input,
+    select {
+      min-height: 45px;
+
+      padding:
+        10px 12px;
+    }
+
+
+    textarea {
+      min-height: 115px;
+
+      padding:
+        11px 12px;
+
+      resize: vertical;
+
+      line-height: 1.6;
+    }
+
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #c3adb5;
+    }
+
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color:
+        #ef91ae;
+
+      background:
+        #ffffff;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(239, 145, 174, .11);
+    }
+
+
+    select {
+      cursor: pointer;
+
+      background:
+        #fffdfd
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23b07f91' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+        no-repeat;
+
+      background-position:
+        right 12px center;
+
+      padding-right: 38px;
+    }
+
+
+    /* =========================================================
+       TEMPLATE
+    ========================================================= */
+
+    .template-box {
+      padding: 10px;
+
+      border:
+        1px solid #f1dce4;
+
+      border-radius: 14px;
+
+      background:
+        #fff8fb;
+    }
+
+
+    .template-description {
+      padding:
+        8px 3px 2px;
+
+      color: #a48792;
+
+      font-size: 10.5px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       PAGE LIST
+    ========================================================= */
+
+    .page-list {
+      display: flex;
+      flex-direction: column;
+
+      gap: 9px;
+    }
+
+
+    /* =========================================================
+       PAGE ITEM
+    ========================================================= */
+
+    .page-item {
+      overflow: hidden;
+
+      border:
+        1px solid #eee0e5;
+
+      border-radius: 15px;
+
+      background:
+        #fffdfd;
+
+      transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+
+    .page-item.open {
+      border-color:
+        #f0b3c6;
+
+      box-shadow:
+        0 4px 15px
+        rgba(208, 104, 137, .055);
+    }
+
+
+    /* =========================================================
+       PAGE HEADER
+    ========================================================= */
+
+    .page-header {
+      min-height: 58px;
+
+      padding:
+        10px 12px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 10px;
+
+      cursor: pointer;
+
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+
+    .page-header:active {
+      background:
+        #fff8fa;
+    }
+
+
+    .page-header-left {
+      min-width: 0;
+
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+    }
+
+
+    .page-number {
+      width: 34px;
+      height: 34px;
+
+      min-width: 34px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 10px;
+
+      background:
+        #fff0f5;
+
+      color:
+        var(--pink-dark);
+
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+
+    .page-name {
+      color:
+        #5e4750;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      line-height: 1.2;
+    }
+
+
+    .page-subtitle {
+      margin-top: 2px;
+
+      color:
+        #b0969f;
+
+      font-size: 10px;
+
+      line-height: 1.2;
+    }
+
+
+    .arrow {
+      width: 27px;
+      height: 27px;
+
+      min-width: 27px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        #fff4f7;
+
+      color:
+        #b78c9b;
+
+      font-size: 15px;
+
+      transition:
+        transform .25s ease,
+        background .2s ease;
+    }
+
+
+    .page-item.open .arrow {
+      transform:
+        rotate(180deg);
+
+      background:
+        #ffe8f0;
+
+      color:
+        var(--pink-dark);
+    }
+
+
+    /* =========================================================
+       PAGE CONTENT
+    ========================================================= */
+
+    .page-content {
+      display: none;
+
+      padding:
+        0 12px 14px;
+
+      border-top:
+        1px solid #f5e8ec;
+    }
+
+
+    .page-item.open .page-content {
+      display: block;
+
+      animation:
+        slideDown .2s ease;
+    }
+
+
+    @keyframes slideDown {
+
+      from {
+        opacity: 0;
+
+        transform:
+          translateY(-4px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          translateY(0);
+      }
+
+    }
+
+
+    .page-content .grid {
+      margin-top: 14px;
+    }
+
+
+    /* =========================================================
+       PAGE NOTE
+    ========================================================= */
+
+    .page-note {
+      margin-top: 10px;
+
+      padding:
+        9px 11px;
+
+      border-radius: 10px;
+
+      background:
+        #fff7fa;
+
+      color:
+        #a1848e;
+
+      font-size: 10px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       UPLOAD
+    ========================================================= */
+
+    .upload-area {
+      width: 100%;
+
+      min-height: 130px;
+
+      display: flex;
+      flex-direction: column;
+
+      align-items: center;
+      justify-content: center;
+
+      padding:
+        18px 12px;
+
+      border:
+        1.5px dashed #e9afc3;
+
+      border-radius: 15px;
+
+      background:
+        linear-gradient(
+          180deg,
+          #fffafd,
+          #fff6f9
+        );
+
+      text-align: center;
+
+      cursor: pointer;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+
+    .upload-area:hover {
+      background:
+        #fff1f6;
+
+      border-color:
+        #ec89aa;
+    }
+
+
+    .upload-area:active {
+      transform:
+        scale(.985);
+    }
+
+
+    .upload-icon {
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+
+      background:
+        #ffe8f0;
+
+      font-size: 21px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .upload-title {
+      color:
+        #765561;
+
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+
+    .upload-subtitle {
+      margin-top: 3px;
+
+      color:
+        #b39aa3;
+
+      font-size: 10px;
+    }
+
+
+    .file-name {
+      max-width: 100%;
+
+      margin-top: 8px;
+
+      padding:
+        4px 8px;
+
+      border-radius: 999px;
+
+      background:
+        #fff0f5;
+
+      color:
+        #c26a8b;
+
+      font-size: 10px;
+      font-weight: 700;
+
+      word-break: break-word;
+    }
+
+
+    input[type="file"] {
+      display: none;
+    }
+
+
+    /* =========================================================
+       ACTION CARD
+    ========================================================= */
+
+    .action-card {
+      position: fixed;
+
+      left: 50%;
+
+      bottom:
+        max(8px, env(safe-area-inset-bottom));
+
+      transform:
+        translateX(-50%);
+
+      z-index: 50;
+
+      width:
+        min(
+          calc(100% - 20px),
+          736px
+        );
+
+      padding: 10px;
+
+      border:
+        1px solid rgba(240, 218, 226, .9);
+
+      border-radius: 17px;
+
+      background:
+        rgba(255, 255, 255, .94);
+
+      backdrop-filter:
+        blur(14px);
+
+      -webkit-backdrop-filter:
+        blur(14px);
+
+      box-shadow:
+        0 8px 28px
+        rgba(91, 51, 67, .10);
+    }
+
+
+    /* =========================================================
+       MAIN BUTTON
+    ========================================================= */
+
+    .main-button {
+      width: 100%;
+
+      min-height: 50px;
+
+      border: none;
+
+      border-radius: 13px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff729d,
+          #ff9ab8
+        );
+
+      color:
+        #ffffff;
+
+      font-family:
+        "Fredoka",
+        sans-serif;
+
+      font-size: 15px;
+      font-weight: 500;
+
+      letter-spacing: .1px;
+
+      box-shadow:
+        0 6px 16px
+        rgba(255, 111, 151, .22);
+
+      transition:
+        transform .15s ease,
+        box-shadow .15s ease;
+    }
+
+
+    .main-button:hover {
+      box-shadow:
+        0 8px 20px
+        rgba(255, 111, 151, .28);
+    }
+
+
+    .main-button:active {
+      transform:
+        scale(.98);
+    }
+
+
+    /* =========================================================
+       SECONDARY BUTTON
+    ========================================================= */
+
+    .secondary-actions {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 8px;
+
+      margin-top: 8px;
+    }
+
+
+    .secondary-button {
+      min-height: 39px;
+
+      border:
+        1px solid #eadce2;
+
+      border-radius: 11px;
+
+      background:
+        #ffffff;
+
+      color:
+        #8b6d78;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      transition:
+        background .15s ease,
+        transform .15s ease;
+    }
+
+
+    .secondary-button:hover {
+      background:
+        #fff7fa;
+    }
+
+
+    .secondary-button:active {
+      transform:
+        scale(.98);
+    }
+
+
+    /* =========================================================
+       STATUS
+    ========================================================= */
+
+    .status {
+      display: none;
+
+      margin-top: 9px;
+
+      padding:
+        11px 12px;
+
+      border-radius: 11px;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    .status.success {
+      display: block;
+
+      background:
+        #effbf4;
+
+      border:
+        1px solid #d1edda;
+
+      color:
+        var(--success);
+    }
+
+
+    .status.error {
+      display: block;
+
+      background:
+        #fff1f3;
+
+      border:
+        1px solid #f2d1d7;
+
+      color:
+        var(--danger);
+    }
+
+
+    /* =========================================================
+       PREVIEW
+    ========================================================= */
+
+    .preview-box {
+      display: none;
+
+      width: 100%;
+
+      max-height: 300px;
+
+      margin-top: 9px;
+
+      padding:
+        12px;
+
+      overflow:
+        auto;
+
+      border-radius: 11px;
+
+      background:
+        #29252a;
+
+      color:
+        #f8e9ee;
+
+      font-family:
+        monospace;
+
+      font-size: 9px;
+
+      line-height: 1.6;
+
+      white-space: pre-wrap;
+
+      word-break: break-word;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    .footer {
+      padding:
+        18px 0 5px;
+
+      text-align: center;
+
+      color:
+        #b59ca5;
+
+      font-size: 10px;
+    }
+
+
+    /* =========================================================
+       TABLET
+    ========================================================= */
+
+    @media (min-width: 701px) {
+
+      .container {
+        padding-top: 30px;
+
+        padding-bottom: 40px;
+      }
+
+
+      .welcome h1 {
+        font-size: 31px;
+      }
+
+
+      .card {
+        padding: 22px;
+      }
+
+
+      .page-header {
+        padding:
+          12px 14px;
+      }
+
+
+      .page-content {
+        padding:
+          0 14px 17px;
+      }
+
+
+      .action-card {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        margin-top: 10px;
+
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+    }
+
+
+    /* =========================================================
+       SMALL MOBILE
+    ========================================================= */
+
+    @media (max-width: 380px) {
+
+      .header-inner {
+        min-height: 58px;
+
+        padding:
+          9px 12px;
+      }
+
+
+      .logo {
+        font-size: 21px;
+      }
+
+
+      .admin-badge {
+        font-size: 9px;
+
+        padding:
+          5px 8px;
+      }
+
+
+      .container {
+        padding:
+          18px 10px
+          calc(120px + env(safe-area-inset-bottom));
+      }
+
+
+      .welcome {
+        padding-bottom: 15px;
+      }
+
+
+      .welcome h1 {
+        font-size: 25px;
+      }
+
+
+      .card {
+        padding: 15px;
+
+        border-radius: 18px;
+      }
+
+
+      .card-title {
+        margin-bottom: 14px;
+      }
+
+
+      .card-title h2 {
+        font-size: 17px;
+      }
+
+
+      .grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+      }
+
+
+      .field.full {
+        grid-column: auto;
+      }
+
+
+      input,
+      select {
+        min-height: 44px;
+
+        font-size: 13px;
+      }
+
+
+      textarea {
+        min-height: 105px;
+      }
+
+
+      .page-header {
+        min-height: 55px;
+
+        padding:
+          9px 10px;
+      }
+
+
+      .page-number {
+        width: 32px;
+        height: 32px;
+
+        min-width: 32px;
+      }
+
+
+      .page-name {
+        font-size: 12px;
+      }
+
+
+      .page-subtitle {
+        font-size: 9px;
+      }
+
+
+      .main-button {
+        min-height: 48px;
+
+        font-size: 14px;
+      }
+
+    }
+
+
+    /* =========================================================
+       REDUCE MOTION
+    ========================================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration:
+          .01ms !important;
+
+        animation-iteration-count:
+          1 !important;
+
+        transition-duration:
+          .01ms !important;
+
+        scroll-behavior:
+          auto !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       HEADER
+  ======================================================== -->
+
+  <header class="header">
+
+    <div class="header-inner">
+
+      <div class="logo">
+        ♡ QueenGift
+      </div>
+
+      <div class="admin-badge">
+        ADMIN PANEL
+      </div>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =======================================================
+       MAIN
+  ======================================================== -->
+
+  <main class="container">
+
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+      <h1>
+        Buat Website 💗
+      </h1>
+
+      <p>
+        Isi data customer untuk membuat website hadiah mereka.
+      </p>
+
+    </section>
+
+
+
+    <!-- INFO -->
+
+    <div class="info-box">
+
+      <strong>💡 Cara kerja</strong><br>
+
+      Kamu tidak harus mengisi semua bagian.
+      Bagian yang dikosongkan akan tetap menggunakan
+      data default dari template.
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DATA ORDER
+    ====================================================== -->
+
+    <section class="card">
+
+      <div class="card-title">
+
+        <div class="card-icon">
+          ♡
+        </div>
+
+        <div>
+
+          <h2>
+            Data Order
+          </h2>
+
+          <p>
+            Informasi dasar website
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="grid">
+
+
+        <!-- CUSTOMER -->
+
+        <div class="field">
+
+          <label>
+            Nama Customer
+          </label>
+
+          <input
+            type="text"
+            id="customerName"
+            placeholder="Contoh: Ainun"
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <!-- RECIPIENT -->
+
+        <div class="field">
+
+          <label>
+            Nama Penerima
+          </label>
+
+          <input
+            type="text"
+            id="recipientName"
+            placeholder="Contoh: Sayang"
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div class="field">
+
+          <label>
+            Password Website
+          </label>
+
+          <input
+            type="text"
+            id="password"
+            placeholder="Contoh: 0909"
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <!-- DATE -->
+
+        <div class="field">
+
+          <label>
+            Tanggal
+          </label>
+
+          <input
+            type="text"
+            id="date"
+            placeholder="Contoh: 2 Monthsary"
+            autocomplete="off"
+          >
+
+        </div>
+
+
+        <!-- TEMPLATE -->
+
+        <div class="field full">
+
+          <label>
+            Jenis Template
+          </label>
+
+          <div class="template-box">
+
+            <select id="template">
+
+              <option value="monthsary">
+                💗 Monthsary
+              </option>
+
+              <option value="anniversary">
+                💕 Anniversary
+              </option>
+
+              <option value="birthday">
+                🎂 Birthday
+              </option>
+
+              <option value="apology">
+                💙 Apology
+              </option>
+
+            </select>
+
+            <div class="template-description">
+
+              Template menentukan tampilan dasar
+              website yang akan digunakan.
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EDIT WEBSITE
+    ====================================================== -->
+
+    <section class="card">
+
+      <div class="card-title">
+
+        <div class="card-icon">
+          ✏️
+        </div>
+
+        <div>
+
+          <h2>
+            Edit Isi Website
+          </h2>
+
+          <p>
+            Kosongkan jika ingin menggunakan isi default
+          </p>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="page-list">
+
+
+        <!-- =================================================
+             PAGE 1
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                01
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Password
+                </div>
+
+                <div class="page-subtitle">
+                  Halaman pembuka
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                  <span class="optional">
+                    optional
+                  </span>
+                </label>
+
+                <input
+                  type="text"
+                  id="page1Title"
+                  placeholder="ayooo ayang tebak passwordnya! 💗"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Subtitle
+                  <span class="optional">
+                    optional
+                  </span>
+                </label>
+
+                <input
+                  type="text"
+                  id="page1Subtitle"
+                  placeholder="kalau salah, ayang aku gigit >:O"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Hint
+                  <span class="optional">
+                    optional
+                  </span>
+                </label>
+
+                <input
+                  type="text"
+                  id="page1Hint"
+                  placeholder="hint : our date xixi! 💗"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Foto / Icon
+                </label>
+
+                <input
+                  type="text"
+                  id="page1Photo"
+                  placeholder="contoh: icon6.webp"
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="page-note">
+              💡 Page 1 digunakan sebagai halaman
+              password sebelum masuk ke website.
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 2
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                02
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Pembuka
+                </div>
+
+                <div class="page-subtitle">
+                  Setelah password berhasil
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <input
+                  type="text"
+                  id="page2Title"
+                  placeholder="cieee udah bisa dibuka! 💗"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page2Button"
+                  placeholder="tap disinii <3"
+                >
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 3
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                03
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Pilihan
+                </div>
+
+                <div class="page-subtitle">
+                  Interaksi dengan penerima
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page3Title"
+                  placeholder="aloo sayang, udah siap belom sama kadonya?"
+                ></textarea>
+
+              </div>
+
+
+              <div class="field">
+
+                <label>
+                  Tombol Yes
+                </label>
+
+                <input
+                  type="text"
+                  id="page3ButtonYes"
+                  placeholder="soOo excited!~>^<"
+                >
+
+              </div>
+
+
+              <div class="field">
+
+                <label>
+                  Tombol No
+                </label>
+
+                <input
+                  type="text"
+                  id="page3ButtonNo"
+                  placeholder="no no by, no no"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Pesan saat pilih No
+                </label>
+
+                <textarea
+                  id="page3Tease"
+                  placeholder="ish, iseng mulu 😤 tap yang excited sekarang jugaa!"
+                ></textarea>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 4
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                04
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Surprise
+                </div>
+
+                <div class="page-subtitle">
+                  Pengantar hadiah
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page4Title"
+                  placeholder="yeayy terimakasih sudah menjawab!!!"
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Isi
+                </label>
+
+                <textarea
+                  id="page4Text"
+                  placeholder="last one i made something for u sayang, siap yaaa .."
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page4Button"
+                  placeholder="oteiii sayanggg"
+                >
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 5
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                05
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Anniversary
+                </div>
+
+                <div class="page-subtitle">
+                  Ucapan utama
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page5Title"
+                  placeholder="happy mensive yang ke 2 bulan sayang!"
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks
+                </label>
+
+                <input
+                  type="text"
+                  id="page5Text"
+                  placeholder="i love you, now and always."
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page5Button"
+                  placeholder="next surprise ❤️"
+                >
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 6
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                06
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Surat
+                </div>
+
+                <div class="page-subtitle">
+                  Pesan panjang
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page6Title"
+                  placeholder="Happy 2nd Monthsary!"
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Musik
+                </label>
+
+                <input
+                  type="text"
+                  id="page6MusicText"
+                  placeholder="💗 tap play music <3"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Isi Surat
+                </label>
+
+                <textarea
+                  id="message"
+                  style="min-height:240px;"
+                  placeholder="Tulis pesan panjang untuk penerima..."
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page6Button"
+                  placeholder="next surprise 💗"
+                >
+
+              </div>
+
+
+            </div>
+
+
+            <div class="page-note">
+              💗 Kamu bisa menulis pesan panjang di sini.
+              Pisahkan paragraf menggunakan enter.
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 7
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                07
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Penutup
+                </div>
+
+                <div class="page-subtitle">
+                  Pesan sebelum halaman terakhir
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page7Title"
+                  placeholder="happy 2nd monthsary, sayangku! 💗"
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Pesan 1
+                </label>
+
+                <textarea
+                  id="page7Text1"
+                  placeholder="semoga kita selalu punya alasan buat tetap memilih satu sama lain."
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Pesan 2
+                </label>
+
+                <textarea
+                  id="page7Text2"
+                  placeholder="makasih ya udah jadi bagian paling hangat di hidup aku."
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page7Button"
+                  placeholder="last one ♡"
+                >
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             PAGE 8
+        ================================================== -->
+
+        <div class="page-item">
+
+          <div
+            class="page-header"
+            onclick="togglePage(this)"
+          >
+
+            <div class="page-header-left">
+
+              <div class="page-number">
+                08
+              </div>
+
+              <div>
+
+                <div class="page-name">
+                  Final
+                </div>
+
+                <div class="page-subtitle">
+                  Halaman terakhir
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="arrow">
+             ⌄
+            </div>
+
+          </div>
+
+
+          <div class="page-content">
+
+            <div class="grid">
+
+
+              <div class="field full">
+
+                <label>
+                  Judul
+                </label>
+
+                <textarea
+                  id="page8Title"
+                  placeholder="i love you, now and always."
+                ></textarea>
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Pesan 1
+                </label>
+
+                <input
+                  type="text"
+                  id="page8Text1"
+                  placeholder="jangan lupa senyum hari ini yaa."
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Pesan 2
+                </label>
+
+                <input
+                  type="text"
+                  id="page8Text2"
+                  placeholder="happy 2nd monthsary, my love. 💗"
+                >
+
+              </div>
+
+
+              <div class="field full">
+
+                <label>
+                  Teks Tombol
+                </label>
+
+                <input
+                  type="text"
+                  id="page8Button"
+                  placeholder="replay ♡"
+                >
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOTO
+    ====================================================== -->
+
+    <section class="card">
+
+      <div class="card-title">
+
+        <div class="card-icon">
+          📷
+        </div>
+
+        <div>
+
+          <h2>
+            Foto
+          </h2>
+
+          <p>
+            Upload foto untuk website
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <label
+        class="upload-area"
+        for="photoInput"
+      >
+
+        <div class="upload-icon">
+          📸
+        </div>
+
+        <div class="upload-title">
+          Pilih foto
+        </div>
+
+        <div class="upload-subtitle">
+          Bisa pilih beberapa foto sekaligus
+        </div>
+
+        <div
+          class="file-name"
+          id="photoName"
+        >
+          Belum ada foto
+        </div>
+
+      </label>
+
+
+      <input
+        type="file"
+        id="photoInput"
+        accept="image/*"
+        multiple
+      >
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MUSIC
+    ====================================================== -->
+
+    <section class="card">
+
+      <div class="card-title">
+
+        <div class="card-icon">
+          🎵
+        </div>
+
+        <div>
+
+          <h2>
+            Musik
+          </h2>
+
+          <p>
+            Musik background website
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <label
+        class="upload-area"
+        for="musicInput"
+      >
+
+        <div class="upload-icon">
+          🎶
+        </div>
+
+        <div class="upload-title">
+          Pilih musik
+        </div>
+
+        <div class="upload-subtitle">
+          MP3, WAV, atau audio lainnya
+        </div>
+
+        <div
+          class="file-name"
+          id="musicName"
+        >
+          Belum ada musik
+        </div>
+
+      </label>
+
+
+      <input
+        type="file"
+        id="musicInput"
+        accept="audio/*"
+      >
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <div class="footer">
+
+      ♡ QueenGift — Personalized Web Gift
+
+    </div>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       ACTION
+  ======================================================== -->
+
+  <div class="action-card">
+
+    <button
+      class="main-button"
+      id="createWebsiteBtn"
+      type="button"
+      onclick="createWebsite()"
+    >
+      ✨ BUAT WEBSITE
+    </button>
+
+
+    <div class="secondary-actions">
+
+      <button
+        class="secondary-button"
+        type="button"
+        onclick="previewData()"
+      >
+        👀 Preview Data
+      </button>
+
+
+      <button
+        class="secondary-button"
+        type="button"
+        onclick="resetForm()"
+      >
+        🗑️ Reset
+      </button>
+
+    </div>
+
+
+    <div
+      class="status"
+      id="status"
+    ></div>
+
+
+    <pre
+      class="preview-box"
+      id="previewBox"
+    ></pre>
+
+  </div>
+
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+  ======================================================== -->
+
+  <script>
+
+
+    /* =========================================================
+       TOGGLE PAGE
+    ========================================================= */
+
+    function togglePage(header) {
+
+      const item =
+        header.closest(".page-item");
+
+      const allItems =
+        document.querySelectorAll(".page-item");
+
+
+      /*
+       * Tutup halaman lain
+       */
+
+      allItems.forEach(page => {
+
+        if (page !== item) {
+
+          page.classList.remove("open");
+
+        }
+
+      });
+
+
+      /*
+       * Buka / tutup halaman yang dipilih
+       */
+
+      item.classList.toggle("open");
+
+    }
+
+
+
+    /* =========================================================
+       FILE FOTO
+    ========================================================= */
+
+    const photoInput =
+      document.getElementById("photoInput");
+
+    const photoName =
+      document.getElementById("photoName");
+
+
+    photoInput.addEventListener(
+      "change",
+      function () {
+
+        const files =
+          Array.from(this.files || []);
+
+
+        if (!files.length) {
+
+          photoName.textContent =
+            "Belum ada foto";
+
+          return;
+
+        }
+
+
+        if (files.length === 1) {
+
+          photoName.textContent =
+            files[0].name;
+
+          return;
+
+        }
+
+
+        photoName.textContent =
+          `${files.length} foto dipilih`;
+
+      }
+    );
+
+
+
+    /* =========================================================
+       FILE MUSIK
+    ========================================================= */
+
+    const musicInput =
+      document.getElementById("musicInput");
+
+    const musicName =
+      document.getElementById("musicName");
+
+
+    musicInput.addEventListener(
+      "change",
+      function () {
+
+        const file =
+          this.files?.[0];
+
+
+        if (!file) {
+
+          musicName.textContent =
+            "Belum ada musik";
+
+          return;
+
+        }
+
+
+        musicName.textContent =
+          file.name;
+
+      }
+    );
+
+
+
+    /* =========================================================
+       GET VALUE
+    ========================================================= */
+
+    function getValue(id) {
+
+      const element =
+        document.getElementById(id);
+
+      if (!element) {
+        return "";
+      }
+
+      return element.value.trim();
+
+    }
+
+
+
+    /* =========================================================
+       BUILD ORDER DATA
+    ========================================================= */
+
+    function buildOrderData() {
+
+      const order = {};
+
+
+      /*
+       * Data dasar
+       */
+
+      const fields = [
+
+        "customerName",
+        "recipientName",
+        "password",
+        "date",
+        "template",
+
+        "page1Title",
+        "page1Subtitle",
+        "page1Hint",
+        "page1Photo",
+
+        "page2Title",
+        "page2Button",
+
+        "page3Title",
+        "page3ButtonYes",
+        "page3ButtonNo",
+        "page3Tease",
+
+        "page4Title",
+        "page4Text",
+        "page4Button",
+
+        "page5Title",
+        "page5Text",
+        "page5Button",
+
+        "page6Title",
+        "page6MusicText",
+        "message",
+        "page6Button",
+
+        "page7Title",
+        "page7Text1",
+        "page7Text2",
+        "page7Button",
+
+        "page8Title",
+        "page8Text1",
+        "page8Text2",
+        "page8Button"
+
+      ];
+
+
+      /*
+       * Hanya simpan field yang diisi.
+       *
+       * Dengan cara ini:
+       *
+       * field kosong
+       * ↓
+       * tidak menimpa data default
+       *
+       * field terisi
+       * ↓
+       * digunakan sebagai custom
+       */
+
+      fields.forEach(id => {
+
+        const value =
+          getValue(id);
+
+
+        if (value !== "") {
+
+          order[id] = value;
+
+        }
+
+      });
+
+
+      return order;
+
+    }
+
+
+
+    /* =========================================================
+       READ FILE AS DATA URL
+    ========================================================= */
+
+    function readFileAsDataURL(file) {
+
+      return new Promise(
+        (resolve, reject) => {
+
+          const reader =
+            new FileReader();
+
+
+          reader.onload = () => {
+
+            resolve(
+              reader.result
+            );
+
+          };
+
+
+          reader.onerror = () => {
+
+            reject(
+              new Error(
+                "File gagal dibaca."
+              )
+            );
+
+          };
+
+
+          reader.readAsDataURL(file);
+
+        }
+      );
+
+    }
+
+
+
+    /* =========================================================
+       CREATE WEBSITE
+    ========================================================= */
+
+    async function createWebsite() {
+
+      const button =
+        document.getElementById(
+          "createWebsiteBtn"
+        );
+
+      const status =
+        document.getElementById(
+          "status"
+        );
+
+
+      try {
+
+        /*
+         * Ambil data form
+         */
+
+        const order =
+          buildOrderData();
+
+
+        /*
+         * Validasi minimum
+         */
+
+        if (
+          !order.customerName &&
+          !order.recipientName &&
+          !order.password &&
+          !order.date
+        ) {
+
+          showStatus(
+            "error",
+            "Isi minimal salah satu data order terlebih dahulu."
+          );
+
+          return;
+
+        }
+
+
+        /*
+         * Foto
+         */
+
+        const photos =
+          Array.from(
+            photoInput.files || []
+          );
+
+
+        if (photos.length) {
+
+          /*
+           * Untuk sementara kita simpan
+           * foto sebagai Data URL.
+           *
+           * Ini cocok untuk tahap testing.
+           */
+
+          const photoData = [];
+
+
+          for (const file of photos) {
+
+            const data =
+              await readFileAsDataURL(file);
+
+            photoData.push(data);
+
+          }
+
+
+          order.photos =
+            photoData;
+
+        }
+
+
+        /*
+         * Musik
+         */
+
+        const musicFile =
+          musicInput.files?.[0];
+
+
+        if (musicFile) {
+
+          /*
+           * Untuk testing lokal.
+           */
+
+          const musicData =
+            await readFileAsDataURL(
+              musicFile
+            );
+
+
+          order.music =
+            musicData;
+
+        }
+
+
+        /*
+         * Simpan ke LocalStorage
+         */
+
+        localStorage.setItem(
+          "queengiftOrder",
+          JSON.stringify(order)
+        );
+
+
+        /*
+         * Simpan waktu pembuatan
+         */
+
+        localStorage.setItem(
+          "queengiftCreatedAt",
+          new Date().toISOString()
+        );
+
+
+        /*
+         * Status
+         */
+
+        showStatus(
+          "success",
+          "✨ Data berhasil disimpan. Template siap menggunakan data Admin."
+        );
+
+
+        /*
+         * Tombol
+         */
+
+        button.textContent =
+          "✓ DATA TERSIMPAN";
+
+
+        setTimeout(() => {
+
+          button.textContent =
+            "✨ BUAT WEBSITE";
+
+        }, 2200);
+
+
+        /*
+         * Scroll sedikit ke status
+         */
+
+        setTimeout(() => {
+
+          status.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+        }, 100);
+
+      }
+
+      catch (error) {
+
+        console.error(error);
+
+        showStatus(
+          "error",
+          "❌ Terjadi kesalahan saat menyimpan data."
+        );
+
+      }
+
+    }
+
+
+
+    /* =========================================================
+       STATUS
+    ========================================================= */
+
+    function showStatus(
+      type,
+      message
+    ) {
+
+      const status =
+        document.getElementById(
+          "status"
+        );
+
+
+      status.className =
+        `status ${type}`;
+
+
+      status.textContent =
+        message;
+
+    }
+
+
+
+    /* =========================================================
+       PREVIEW DATA
+    ========================================================= */
+
+    function previewData() {
+
+      const order =
+        buildOrderData();
+
+
+      /*
+       * Tambahkan informasi file
+       */
+
+      const photoCount =
+        photoInput.files?.length || 0;
+
+
+      const musicFile =
+        musicInput.files?.[0];
+
+
+      const preview = {
+
+        ...order,
+
+        photos:
+          photoCount
+            ? `${photoCount} foto dipilih`
+            : "(tidak ada)",
+
+        music:
+          musicFile
+            ? musicFile.name
+            : "(tidak ada)"
+
+      };
+
+
+      const previewBox =
+        document.getElementById(
+          "previewBox"
+        );
+
+
+      previewBox.style.display =
+        "block";
+
+
+      previewBox.textContent =
+        JSON.stringify(
+          preview,
+          null,
+          2
+        );
+
+
+      setTimeout(() => {
+
+        previewBox.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }, 100);
+
+    }
+
+
+
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    function resetForm() {
+
+      const confirmed =
+        confirm(
+          "Yakin ingin menghapus semua data yang sudah diisi?"
+        );
+
+
+      if (!confirmed) {
+        return;
+      }
+
+
+      /*
+       * Reset semua input
+       */
+
+      document
+        .querySelectorAll(
+          "input:not([type='file']), textarea"
+        )
+        .forEach(element => {
+
+          element.value = "";
+
+        });
+
+
+      /*
+       * Reset select
+       */
+
+      const template =
+        document.getElementById(
+          "template"
+        );
+
+
+      if (template) {
+
+        template.value =
+          "monthsary";
+
+      }
+
+
+      /*
+       * Reset file
+       */
+
+      photoInput.value = "";
+      musicInput.value = "";
+
+
+      photoName.textContent =
+        "Belum ada foto";
+
+
+      musicName.textContent =
+        "Belum ada musik";
+
+
+      /*
+       * Hapus preview
+       */
+
+      const previewBox =
+        document.getElementById(
+          "previewBox"
+        );
+
+
+      previewBox.style.display =
+        "none";
+
+
+      previewBox.textContent =
+        "";
+
+
+      /*
+       * Hapus status
+       */
+
+      const status =
+        document.getElementById(
+          "status"
+        );
+
+
+      status.className =
+        "status";
+
+
+      status.textContent =
+        "";
+
+
+      /*
+       * Hapus data LocalStorage
+       */
+
+      localStorage.removeItem(
+        "queengiftOrder"
+      );
+
+
+      localStorage.removeItem(
+        "queengiftCreatedAt"
+      );
+
+
+      /*
+       * Tutup semua accordion
+       */
+
+      document
+        .querySelectorAll(
+          ".page-item"
+        )
+        .forEach(item => {
+
+          item.classList.remove(
+            "open"
+          );
+
+        });
+
+    }
+
+
+
+    /* =========================================================
+       LOAD SAVED DATA
+    ========================================================= */
+
+    function loadSavedData() {
+
+      try {
+
+        const saved =
+          localStorage.getItem(
+            "queengiftOrder"
+          );
+
+
+        if (!saved) {
+          return;
+        }
+
+
+        const order =
+          JSON.parse(saved);
+
+
+        /*
+         * Masukkan data tersimpan
+         */
+
+        Object.keys(order)
+          .forEach(key => {
+
+            const element =
+              document.getElementById(
+                key
+              );
+
+
+            if (
+              element &&
+              typeof order[key] === "string"
+            ) {
+
+              element.value =
+                order[key];
+
+            }
+
+          });
+
+
+      }
+
+      catch (error) {
+
+        console.error(
+          "Gagal memuat data:",
+          error
+        );
+
+      }
+
+    }
+
+
+
+    /* =========================================================
+       INIT
+    ========================================================= */
+
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+
+        loadSavedData();
+
+      }
+    );
+
+
+  </script>
+
+</body>
+</html>
