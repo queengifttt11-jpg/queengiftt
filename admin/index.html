@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
   <meta charset="UTF-8">
 
   <meta
@@ -26,6 +28,7 @@
     ========================================================= */
 
     :root {
+
       --pink: #ff7fa8;
       --pink-dark: #df638c;
       --pink-light: #ff9fba;
@@ -44,6 +47,7 @@
 
       --success: #5b9b76;
       --danger: #bd6875;
+
     }
 
 
@@ -65,6 +69,7 @@
 
 
     body {
+
       min-height: 100vh;
 
       font-family:
@@ -77,21 +82,25 @@
       color: var(--text);
 
       background:
+
         radial-gradient(
           circle at top left,
           rgba(255, 196, 215, .45),
           transparent 35%
         ),
+
         radial-gradient(
           circle at bottom right,
           rgba(255, 225, 236, .7),
           transparent 35%
         ),
+
         #fff7fa;
 
       overflow-x: hidden;
 
       -webkit-tap-highlight-color: transparent;
+
     }
 
 
@@ -104,17 +113,22 @@
 
 
     button {
+
       -webkit-appearance: none;
       appearance: none;
+
       cursor: pointer;
+
     }
 
 
     input,
     textarea,
     select {
+
       -webkit-appearance: none;
       appearance: none;
+
     }
 
 
@@ -123,6 +137,7 @@
     ========================================================= */
 
     .header {
+
       width: 100%;
 
       position: sticky;
@@ -138,10 +153,12 @@
 
       border-bottom:
         1px solid rgba(241, 220, 228, .85);
+
     }
 
 
     .header-inner {
+
       width: 100%;
       max-width: 760px;
 
@@ -153,14 +170,18 @@
         10px 16px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 12px;
+
     }
 
 
     .logo {
+
       font-family:
         "Fredoka",
         sans-serif;
@@ -173,6 +194,7 @@
       letter-spacing: -.3px;
 
       white-space: nowrap;
+
     }
 
 
@@ -182,7 +204,9 @@
 
 
     .admin-badge {
+
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -203,6 +227,7 @@
       letter-spacing: .3px;
 
       white-space: nowrap;
+
     }
 
 
@@ -211,6 +236,7 @@
     ========================================================= */
 
     .container {
+
       width: 100%;
       max-width: 760px;
 
@@ -219,6 +245,7 @@
       padding:
         22px 14px
         calc(125px + env(safe-area-inset-bottom));
+
     }
 
 
@@ -227,12 +254,15 @@
     ========================================================= */
 
     .welcome {
+
       padding:
         4px 3px 18px;
+
     }
 
 
     .welcome h1 {
+
       font-family:
         "Fredoka",
         sans-serif;
@@ -245,10 +275,12 @@
       color: var(--text-dark);
 
       letter-spacing: -.4px;
+
     }
 
 
     .welcome p {
+
       margin-top: 6px;
 
       font-size: 13px;
@@ -256,6 +288,7 @@
       line-height: 1.5;
 
       color: var(--text-soft);
+
     }
 
 
@@ -264,6 +297,7 @@
     ========================================================= */
 
     .info-box {
+
       position: relative;
 
       padding:
@@ -284,10 +318,12 @@
       font-size: 11.5px;
 
       line-height: 1.65;
+
     }
 
 
     .info-box::before {
+
       content: "💡";
 
       position: absolute;
@@ -296,6 +332,7 @@
       top: 14px;
 
       font-size: 18px;
+
     }
 
 
@@ -309,6 +346,7 @@
     ========================================================= */
 
     .card {
+
       width: 100%;
 
       background:
@@ -326,6 +364,7 @@
       box-shadow:
         0 5px 20px
         rgba(137, 72, 96, .055);
+
     }
 
 
@@ -334,22 +373,27 @@
     ========================================================= */
 
     .card-title {
+
       display: flex;
+
       align-items: center;
 
       gap: 10px;
 
       margin-bottom: 17px;
+
     }
 
 
     .card-icon {
+
       width: 38px;
       height: 38px;
 
       min-width: 38px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -365,10 +409,12 @@
       color: var(--pink);
 
       font-size: 17px;
+
     }
 
 
     .card-title h2 {
+
       font-family:
         "Fredoka",
         sans-serif;
@@ -379,10 +425,12 @@
       line-height: 1.2;
 
       color: #553f47;
+
     }
 
 
     .card-title p {
+
       margin-top: 2px;
 
       color: #a98b96;
@@ -390,6 +438,7 @@
       font-size: 11px;
 
       line-height: 1.3;
+
     }
 
 
@@ -398,28 +447,32 @@
     ========================================================= */
 
     .grid {
+
       display: grid;
 
       grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
       gap: 14px;
+
     }
 
 
     .field {
+
       min-width: 0;
 
       display: flex;
+
       flex-direction: column;
 
       gap: 6px;
+
     }
 
 
     .field.full {
-      grid-column:
-        1 / -1;
+      grid-column: 1 / -1;
     }
 
 
@@ -428,16 +481,19 @@
     ========================================================= */
 
     label {
+
       color: #705560;
 
       font-size: 12px;
       font-weight: 700;
 
       line-height: 1.3;
+
     }
 
 
     .optional {
+
       color: #bca5ae;
 
       font-size: 10px;
@@ -445,6 +501,7 @@
       font-weight: 500;
 
       margin-left: 2px;
+
     }
 
 
@@ -455,6 +512,7 @@
     input,
     textarea,
     select {
+
       width: 100%;
 
       border:
@@ -474,19 +532,23 @@
         border-color .2s ease,
         box-shadow .2s ease,
         background .2s ease;
+
     }
 
 
     input,
     select {
+
       min-height: 45px;
 
       padding:
         10px 12px;
+
     }
 
 
     textarea {
+
       min-height: 115px;
 
       padding:
@@ -495,18 +557,22 @@
       resize: vertical;
 
       line-height: 1.6;
+
     }
 
 
     input::placeholder,
     textarea::placeholder {
+
       color: #c3adb5;
+
     }
 
 
     input:focus,
     textarea:focus,
     select:focus {
+
       border-color:
         #ef91ae;
 
@@ -516,10 +582,12 @@
       box-shadow:
         0 0 0 3px
         rgba(239, 145, 174, .11);
+
     }
 
 
     select {
+
       cursor: pointer;
 
       background:
@@ -531,6 +599,7 @@
         right 12px center;
 
       padding-right: 38px;
+
     }
 
 
@@ -539,6 +608,7 @@
     ========================================================= */
 
     .template-box {
+
       padding: 10px;
 
       border:
@@ -548,10 +618,12 @@
 
       background:
         #fff8fb;
+
     }
 
 
     .template-description {
+
       padding:
         8px 3px 2px;
 
@@ -560,6 +632,7 @@
       font-size: 10.5px;
 
       line-height: 1.5;
+
     }
 
 
@@ -568,18 +641,18 @@
     ========================================================= */
 
     .page-list {
+
       display: flex;
+
       flex-direction: column;
 
       gap: 9px;
+
     }
 
 
-    /* =========================================================
-       PAGE ITEM
-    ========================================================= */
-
     .page-item {
+
       overflow: hidden;
 
       border:
@@ -593,31 +666,33 @@
       transition:
         border-color .2s ease,
         box-shadow .2s ease;
+
     }
 
 
     .page-item.open {
+
       border-color:
         #f0b3c6;
 
       box-shadow:
         0 4px 15px
         rgba(208, 104, 137, .055);
+
     }
 
 
-    /* =========================================================
-       PAGE HEADER
-    ========================================================= */
-
     .page-header {
+
       min-height: 58px;
 
       padding:
         10px 12px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 10px;
@@ -625,7 +700,9 @@
       cursor: pointer;
 
       user-select: none;
+
       -webkit-user-select: none;
+
     }
 
 
@@ -636,22 +713,27 @@
 
 
     .page-header-left {
+
       min-width: 0;
 
       display: flex;
+
       align-items: center;
 
       gap: 10px;
+
     }
 
 
     .page-number {
+
       width: 34px;
       height: 34px;
 
       min-width: 34px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -665,10 +747,12 @@
 
       font-size: 12px;
       font-weight: 800;
+
     }
 
 
     .page-name {
+
       color:
         #5e4750;
 
@@ -676,10 +760,12 @@
       font-weight: 700;
 
       line-height: 1.2;
+
     }
 
 
     .page-subtitle {
+
       margin-top: 2px;
 
       color:
@@ -688,16 +774,19 @@
       font-size: 10px;
 
       line-height: 1.2;
+
     }
 
 
     .arrow {
+
       width: 27px;
       height: 27px;
 
       min-width: 27px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -714,10 +803,12 @@
       transition:
         transform .25s ease,
         background .2s ease;
+
     }
 
 
     .page-item.open .arrow {
+
       transform:
         rotate(180deg);
 
@@ -726,14 +817,12 @@
 
       color:
         var(--pink-dark);
+
     }
 
 
-    /* =========================================================
-       PAGE CONTENT
-    ========================================================= */
-
     .page-content {
+
       display: none;
 
       padding:
@@ -741,31 +830,38 @@
 
       border-top:
         1px solid #f5e8ec;
+
     }
 
 
     .page-item.open .page-content {
+
       display: block;
 
       animation:
         slideDown .2s ease;
+
     }
 
 
     @keyframes slideDown {
 
       from {
+
         opacity: 0;
 
         transform:
           translateY(-4px);
+
       }
 
       to {
+
         opacity: 1;
 
         transform:
           translateY(0);
+
       }
 
     }
@@ -776,11 +872,8 @@
     }
 
 
-    /* =========================================================
-       PAGE NOTE
-    ========================================================= */
-
     .page-note {
+
       margin-top: 10px;
 
       padding:
@@ -797,6 +890,7 @@
       font-size: 10px;
 
       line-height: 1.5;
+
     }
 
 
@@ -805,11 +899,13 @@
     ========================================================= */
 
     .upload-area {
+
       width: 100%;
 
       min-height: 130px;
 
       display: flex;
+
       flex-direction: column;
 
       align-items: center;
@@ -838,29 +934,36 @@
         background .2s ease,
         border-color .2s ease,
         transform .2s ease;
+
     }
 
 
     .upload-area:hover {
+
       background:
         #fff1f6;
 
       border-color:
         #ec89aa;
+
     }
 
 
     .upload-area:active {
+
       transform:
         scale(.985);
+
     }
 
 
     .upload-icon {
+
       width: 43px;
       height: 43px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
@@ -872,29 +975,35 @@
       font-size: 21px;
 
       margin-bottom: 8px;
+
     }
 
 
     .upload-title {
+
       color:
         #765561;
 
       font-size: 12px;
       font-weight: 700;
+
     }
 
 
     .upload-subtitle {
+
       margin-top: 3px;
 
       color:
         #b39aa3;
 
       font-size: 10px;
+
     }
 
 
     .file-name {
+
       max-width: 100%;
 
       margin-top: 8px;
@@ -914,6 +1023,7 @@
       font-weight: 700;
 
       word-break: break-word;
+
     }
 
 
@@ -927,6 +1037,7 @@
     ========================================================= */
 
     .action-card {
+
       position: fixed;
 
       left: 50%;
@@ -964,6 +1075,7 @@
       box-shadow:
         0 8px 28px
         rgba(91, 51, 67, .10);
+
     }
 
 
@@ -972,6 +1084,7 @@
     ========================================================= */
 
     .main-button {
+
       width: 100%;
 
       min-height: 50px;
@@ -1006,19 +1119,33 @@
       transition:
         transform .15s ease,
         box-shadow .15s ease;
+
     }
 
 
     .main-button:hover {
+
       box-shadow:
         0 8px 20px
         rgba(255, 111, 151, .28);
+
     }
 
 
     .main-button:active {
+
       transform:
         scale(.98);
+
+    }
+
+
+    .main-button:disabled {
+
+      opacity: .65;
+
+      cursor: wait;
+
     }
 
 
@@ -1027,6 +1154,7 @@
     ========================================================= */
 
     .secondary-actions {
+
       display: grid;
 
       grid-template-columns:
@@ -1035,10 +1163,12 @@
       gap: 8px;
 
       margin-top: 8px;
+
     }
 
 
     .secondary-button {
+
       min-height: 39px;
 
       border:
@@ -1058,18 +1188,23 @@
       transition:
         background .15s ease,
         transform .15s ease;
+
     }
 
 
     .secondary-button:hover {
+
       background:
         #fff7fa;
+
     }
 
 
     .secondary-button:active {
+
       transform:
         scale(.98);
+
     }
 
 
@@ -1078,6 +1213,7 @@
     ========================================================= */
 
     .status {
+
       display: none;
 
       margin-top: 9px;
@@ -1089,11 +1225,17 @@
 
       font-size: 11px;
 
-      line-height: 1.5;
+      line-height: 1.6;
+
+      white-space: pre-line;
+
+      word-break: break-word;
+
     }
 
 
     .status.success {
+
       display: block;
 
       background:
@@ -1104,10 +1246,12 @@
 
       color:
         var(--success);
+
     }
 
 
     .status.error {
+
       display: block;
 
       background:
@@ -1118,6 +1262,73 @@
 
       color:
         var(--danger);
+
+    }
+
+
+    /* =========================================================
+       GENERATED WEBSITE
+    ========================================================= */
+
+    #generatedWebsiteActions {
+
+      margin-top: 9px;
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 8px;
+
+    }
+
+
+    .generated-button {
+
+      min-height: 42px;
+
+      border-radius: 11px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      font-family: inherit;
+
+      cursor: pointer;
+
+    }
+
+
+    .copy-button {
+
+      border:
+        1px solid #eadce2;
+
+      background:
+        #ffffff;
+
+      color:
+        #8b6d78;
+
+    }
+
+
+    .open-button {
+
+      border: none;
+
+      background:
+        linear-gradient(
+          135deg,
+          #ff729d,
+          #ff9ab8
+        );
+
+      color:
+        #ffffff;
+
     }
 
 
@@ -1126,6 +1337,7 @@
     ========================================================= */
 
     .preview-box {
+
       display: none;
 
       width: 100%;
@@ -1158,6 +1370,7 @@
       white-space: pre-wrap;
 
       word-break: break-word;
+
     }
 
 
@@ -1166,6 +1379,7 @@
     ========================================================= */
 
     .footer {
+
       padding:
         18px 0 5px;
 
@@ -1175,6 +1389,7 @@
         #b59ca5;
 
       font-size: 10px;
+
     }
 
 
@@ -1185,9 +1400,11 @@
     @media (min-width: 701px) {
 
       .container {
+
         padding-top: 30px;
 
         padding-bottom: 40px;
+
       }
 
 
@@ -1202,18 +1419,23 @@
 
 
       .page-header {
+
         padding:
           12px 14px;
+
       }
 
 
       .page-content {
+
         padding:
           0 14px 17px;
+
       }
 
 
       .action-card {
+
         position: relative;
 
         left: auto;
@@ -1226,7 +1448,9 @@
         margin-top: 10px;
 
         backdrop-filter: none;
+
         -webkit-backdrop-filter: none;
+
       }
 
     }
@@ -1239,10 +1463,12 @@
     @media (max-width: 380px) {
 
       .header-inner {
+
         min-height: 58px;
 
         padding:
           9px 12px;
+
       }
 
 
@@ -1252,22 +1478,28 @@
 
 
       .admin-badge {
+
         font-size: 9px;
 
         padding:
           5px 8px;
+
       }
 
 
       .container {
+
         padding:
           18px 10px
           calc(120px + env(safe-area-inset-bottom));
+
       }
 
 
       .welcome {
+
         padding-bottom: 15px;
+
       }
 
 
@@ -1277,9 +1509,11 @@
 
 
       .card {
+
         padding: 15px;
 
         border-radius: 18px;
+
       }
 
 
@@ -1294,9 +1528,11 @@
 
 
       .grid {
+
         grid-template-columns: 1fr;
 
         gap: 12px;
+
       }
 
 
@@ -1307,9 +1543,11 @@
 
       input,
       select {
+
         min-height: 44px;
 
         font-size: 13px;
+
       }
 
 
@@ -1319,18 +1557,22 @@
 
 
       .page-header {
+
         min-height: 55px;
 
         padding:
           9px 10px;
+
       }
 
 
       .page-number {
+
         width: 32px;
         height: 32px;
 
         min-width: 32px;
+
       }
 
 
@@ -1345,9 +1587,19 @@
 
 
       .main-button {
+
         min-height: 48px;
 
         font-size: 14px;
+
+      }
+
+
+      #generatedWebsiteActions {
+
+        grid-template-columns:
+          1fr;
+
       }
 
     }
@@ -1362,6 +1614,7 @@
       *,
       *::before,
       *::after {
+
         animation-duration:
           .01ms !important;
 
@@ -1373,11 +1626,13 @@
 
         scroll-behavior:
           auto !important;
+
       }
 
     }
 
   </style>
+
 </head>
 
 
@@ -1435,9 +1690,9 @@
 
       <strong>💡 Cara kerja</strong><br>
 
-      Kamu tidak harus mengisi semua bagian.
-      Bagian yang dikosongkan akan tetap menggunakan
-      data default dari template.
+      Isi data customer, pilih template, upload foto dan musik,
+      kemudian tekan <strong>BUAT WEBSITE</strong>.
+      Sistem akan membuat order dan memberikan link website.
 
     </div>
 
@@ -1656,7 +1911,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -1671,9 +1926,6 @@
 
                 <label>
                   Judul
-                  <span class="optional">
-                    optional
-                  </span>
                 </label>
 
                 <input
@@ -1689,9 +1941,6 @@
 
                 <label>
                   Subtitle
-                  <span class="optional">
-                    optional
-                  </span>
                 </label>
 
                 <input
@@ -1707,9 +1956,6 @@
 
                 <label>
                   Hint
-                  <span class="optional">
-                    optional
-                  </span>
                 </label>
 
                 <input
@@ -1740,8 +1986,10 @@
 
 
             <div class="page-note">
+
               💡 Page 1 digunakan sebagai halaman
               password sebelum masuk ke website.
+
             </div>
 
           </div>
@@ -1782,7 +2030,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -1863,7 +2111,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -1972,7 +2220,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -2066,7 +2314,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -2161,7 +2409,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -2235,8 +2483,10 @@
 
 
             <div class="page-note">
+
               💗 Kamu bisa menulis pesan panjang di sini.
               Pisahkan paragraf menggunakan enter.
+
             </div>
 
           </div>
@@ -2277,7 +2527,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -2385,7 +2635,7 @@
             </div>
 
             <div class="arrow">
-             ⌄
+              ⌄
             </div>
 
           </div>
@@ -2624,7 +2874,9 @@
       type="button"
       onclick="createWebsite()"
     >
+
       ✨ BUAT WEBSITE
+
     </button>
 
 
@@ -2635,7 +2887,9 @@
         type="button"
         onclick="previewData()"
       >
+
         👀 Preview Data
+
       </button>
 
 
@@ -2644,7 +2898,9 @@
         type="button"
         onclick="resetForm()"
       >
+
         🗑️ Reset
+
       </button>
 
     </div>
@@ -2681,30 +2937,29 @@
       const item =
         header.closest(".page-item");
 
+
       const allItems =
-        document.querySelectorAll(".page-item");
+        document.querySelectorAll(
+          ".page-item"
+        );
 
-
-      /*
-       * Tutup halaman lain
-       */
 
       allItems.forEach(page => {
 
         if (page !== item) {
 
-          page.classList.remove("open");
+          page.classList.remove(
+            "open"
+          );
 
         }
 
       });
 
 
-      /*
-       * Buka / tutup halaman yang dipilih
-       */
-
-      item.classList.toggle("open");
+      item.classList.toggle(
+        "open"
+      );
 
     }
 
@@ -2715,10 +2970,15 @@
     ========================================================= */
 
     const photoInput =
-      document.getElementById("photoInput");
+      document.getElementById(
+        "photoInput"
+      );
+
 
     const photoName =
-      document.getElementById("photoName");
+      document.getElementById(
+        "photoName"
+      );
 
 
     photoInput.addEventListener(
@@ -2726,7 +2986,9 @@
       function () {
 
         const files =
-          Array.from(this.files || []);
+          Array.from(
+            this.files || []
+          );
 
 
         if (!files.length) {
@@ -2762,10 +3024,15 @@
     ========================================================= */
 
     const musicInput =
-      document.getElementById("musicInput");
+      document.getElementById(
+        "musicInput"
+      );
+
 
     const musicName =
-      document.getElementById("musicName");
+      document.getElementById(
+        "musicName"
+      );
 
 
     musicInput.addEventListener(
@@ -2801,11 +3068,17 @@
     function getValue(id) {
 
       const element =
-        document.getElementById(id);
+        document.getElementById(
+          id
+        );
+
 
       if (!element) {
+
         return "";
+
       }
+
 
       return element.value.trim();
 
@@ -2821,10 +3094,6 @@
 
       const order = {};
 
-
-      /*
-       * Data dasar
-       */
 
       const fields = [
 
@@ -2873,20 +3142,6 @@
       ];
 
 
-      /*
-       * Hanya simpan field yang diisi.
-       *
-       * Dengan cara ini:
-       *
-       * field kosong
-       * ↓
-       * tidak menimpa data default
-       *
-       * field terisi
-       * ↓
-       * digunakan sebagai custom
-       */
-
       fields.forEach(id => {
 
         const value =
@@ -2895,7 +3150,8 @@
 
         if (value !== "") {
 
-          order[id] = value;
+          order[id] =
+            value;
 
         }
 
@@ -2921,27 +3177,31 @@
             new FileReader();
 
 
-          reader.onload = () => {
+          reader.onload =
+            () => {
 
-            resolve(
-              reader.result
-            );
+              resolve(
+                reader.result
+              );
 
-          };
-
-
-          reader.onerror = () => {
-
-            reject(
-              new Error(
-                "File gagal dibaca."
-              )
-            );
-
-          };
+            };
 
 
-          reader.readAsDataURL(file);
+          reader.onerror =
+            () => {
+
+              reject(
+                new Error(
+                  "File gagal dibaca."
+                )
+              );
+
+            };
+
+
+          reader.readAsDataURL(
+            file
+          );
 
         }
       );
@@ -2961,6 +3221,7 @@
           "createWebsiteBtn"
         );
 
+
       const status =
         document.getElementById(
           "status"
@@ -2969,17 +3230,18 @@
 
       try {
 
-        /*
-         * Ambil data form
-         */
+
+        /* =====================================================
+           AMBIL DATA
+        ===================================================== */
 
         const order =
           buildOrderData();
 
 
-        /*
-         * Validasi minimum
-         */
+        /* =====================================================
+           VALIDASI
+        ===================================================== */
 
         if (
           !order.customerName &&
@@ -2998,9 +3260,27 @@
         }
 
 
-        /*
-         * Foto
-         */
+        /* =====================================================
+           LOADING
+        ===================================================== */
+
+        button.disabled =
+          true;
+
+
+        button.textContent =
+          "⏳ MEMBUAT WEBSITE...";
+
+
+        showStatus(
+          "success",
+          "⏳ Sedang membuat website..."
+        );
+
+
+        /* =====================================================
+           FOTO
+        ===================================================== */
 
         const photos =
           Array.from(
@@ -3010,22 +3290,23 @@
 
         if (photos.length) {
 
-          /*
-           * Untuk sementara kita simpan
-           * foto sebagai Data URL.
-           *
-           * Ini cocok untuk tahap testing.
-           */
-
           const photoData = [];
 
 
-          for (const file of photos) {
+          for (
+            const file
+            of photos
+          ) {
 
             const data =
-              await readFileAsDataURL(file);
+              await readFileAsDataURL(
+                file
+              );
 
-            photoData.push(data);
+
+            photoData.push(
+              data
+            );
 
           }
 
@@ -3036,19 +3317,15 @@
         }
 
 
-        /*
-         * Musik
-         */
+        /* =====================================================
+           MUSIK
+        ===================================================== */
 
         const musicFile =
           musicInput.files?.[0];
 
 
         if (musicFile) {
-
-          /*
-           * Untuk testing lokal.
-           */
 
           const musicData =
             await readFileAsDataURL(
@@ -3062,75 +3339,357 @@
         }
 
 
-        /*
-         * Simpan ke LocalStorage
-         */
+        /* =====================================================
+           KIRIM KE API VERCEL
+        ===================================================== */
 
-        localStorage.setItem(
-          "queengiftOrder",
-          JSON.stringify(order)
+        console.log(
+          "Mengirim order ke API..."
         );
 
 
-        /*
-         * Simpan waktu pembuatan
-         */
+        const response =
+          await fetch(
+            "/api/create-order",
+            {
 
-        localStorage.setItem(
-          "queengiftCreatedAt",
-          new Date().toISOString()
+              method:
+                "POST",
+
+              headers: {
+
+                "Content-Type":
+                  "application/json"
+
+              },
+
+              body:
+                JSON.stringify(
+                  order
+                )
+
+            }
+          );
+
+
+        /* =====================================================
+           AMBIL RESPONSE
+        ===================================================== */
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "Response API:",
+          result
         );
 
 
-        /*
-         * Status
-         */
+        /* =====================================================
+           CEK ERROR
+        ===================================================== */
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          throw new Error(
+            result.message ||
+            "Gagal membuat website."
+          );
+
+        }
+
+
+        /* =====================================================
+           AMBIL ORDER
+        ===================================================== */
+
+        const createdOrder =
+          result.order;
+
+
+        const orderId =
+          createdOrder &&
+          createdOrder.id;
+
+
+        if (!orderId) {
+
+          throw new Error(
+            "Order berhasil dibuat tetapi ID Order tidak ditemukan."
+          );
+
+        }
+
+
+        /* =====================================================
+           BUAT URL WEBSITE
+        ===================================================== */
+
+        const websiteUrl =
+          `${window.location.origin}/template/?id=${encodeURIComponent(orderId)}`;
+
+
+        console.log(
+          "Website URL:",
+          websiteUrl
+        );
+
+
+        /* =====================================================
+           SIMPAN ORDER TERAKHIR
+        ===================================================== */
+
+        localStorage.setItem(
+
+          "queengiftLastOrder",
+
+          JSON.stringify({
+
+            id:
+              orderId,
+
+            url:
+              websiteUrl,
+
+            createdAt:
+              new Date().toISOString()
+
+          })
+
+        );
+
+
+        /* =====================================================
+           TAMPILKAN HASIL
+        ===================================================== */
 
         showStatus(
+
           "success",
-          "✨ Data berhasil disimpan. Template siap menggunakan data Admin."
+
+          `✨ WEBSITE BERHASIL DIBUAT!
+
+ID ORDER:
+${orderId}
+
+LINK WEBSITE:
+${websiteUrl}`
+
         );
 
 
-        /*
-         * Tombol
-         */
+        /* =====================================================
+           HAPUS ACTION LAMA
+        ===================================================== */
+
+        const oldActions =
+          document.getElementById(
+            "generatedWebsiteActions"
+          );
+
+
+        if (oldActions) {
+
+          oldActions.remove();
+
+        }
+
+
+        /* =====================================================
+           CONTAINER ACTION
+        ===================================================== */
+
+        const actions =
+          document.createElement(
+            "div"
+          );
+
+
+        actions.id =
+          "generatedWebsiteActions";
+
+
+        /* =====================================================
+           COPY BUTTON
+        ===================================================== */
+
+        const copyButton =
+          document.createElement(
+            "button"
+          );
+
+
+        copyButton.type =
+          "button";
+
+
+        copyButton.className =
+          "generated-button copy-button";
+
+
+        copyButton.textContent =
+          "🔗 COPY LINK";
+
+
+        copyButton.onclick =
+          async function () {
+
+            try {
+
+              await navigator.clipboard.writeText(
+                websiteUrl
+              );
+
+
+              copyButton.textContent =
+                "✓ LINK TERSALIN";
+
+
+              setTimeout(
+                function () {
+
+                  copyButton.textContent =
+                    "🔗 COPY LINK";
+
+                },
+                1800
+              );
+
+            }
+
+            catch (error) {
+
+              console.error(
+                error
+              );
+
+
+              window.prompt(
+                "Salin link website berikut:",
+                websiteUrl
+              );
+
+            }
+
+          };
+
+
+        /* =====================================================
+           OPEN BUTTON
+        ===================================================== */
+
+        const openButton =
+          document.createElement(
+            "button"
+          );
+
+
+        openButton.type =
+          "button";
+
+
+        openButton.className =
+          "generated-button open-button";
+
+
+        openButton.textContent =
+          "👀 BUKA WEBSITE";
+
+
+        openButton.onclick =
+          function () {
+
+            window.open(
+              websiteUrl,
+              "_blank"
+            );
+
+          };
+
+
+        /* =====================================================
+           MASUKKAN BUTTON
+        ===================================================== */
+
+        actions.appendChild(
+          copyButton
+        );
+
+
+        actions.appendChild(
+          openButton
+        );
+
+
+        status.parentNode.insertBefore(
+          actions,
+          status.nextSibling
+        );
+
+
+        /* =====================================================
+           BUTTON UTAMA
+        ===================================================== */
 
         button.textContent =
-          "✓ DATA TERSIMPAN";
+          "✓ WEBSITE BERHASIL DIBUAT";
 
 
-        setTimeout(() => {
-
-          button.textContent =
-            "✨ BUAT WEBSITE";
-
-        }, 2200);
+        button.disabled =
+          false;
 
 
-        /*
-         * Scroll sedikit ke status
-         */
+        /* =====================================================
+           SCROLL
+        ===================================================== */
 
-        setTimeout(() => {
+        setTimeout(
+          function () {
 
-          status.scrollIntoView({
-            behavior: "smooth",
-            block: "center"
-          });
+            status.scrollIntoView({
 
-        }, 100);
+              behavior:
+                "smooth",
+
+              block:
+                "center"
+
+            });
+
+          },
+          100
+        );
+
 
       }
 
       catch (error) {
 
-        console.error(error);
+        console.error(
+          "CREATE WEBSITE ERROR:",
+          error
+        );
+
 
         showStatus(
+
           "error",
-          "❌ Terjadi kesalahan saat menyimpan data."
+
+          `❌ ${error.message || "Terjadi kesalahan saat membuat website."}`
+
         );
+
+
+        button.disabled =
+          false;
+
+
+        button.textContent =
+          "✨ BUAT WEBSITE";
 
       }
 
@@ -3173,10 +3732,6 @@
       const order =
         buildOrderData();
 
-
-      /*
-       * Tambahkan informasi file
-       */
 
       const photoCount =
         photoInput.files?.length || 0;
@@ -3221,14 +3776,22 @@
         );
 
 
-      setTimeout(() => {
+      setTimeout(
+        function () {
 
-        previewBox.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
+          previewBox.scrollIntoView({
 
-      }, 100);
+            behavior:
+              "smooth",
+
+            block:
+              "center"
+
+          });
+
+        },
+        100
+      );
 
     }
 
@@ -3247,28 +3810,33 @@
 
 
       if (!confirmed) {
+
         return;
+
       }
 
 
-      /*
-       * Reset semua input
-       */
+      /* =====================================================
+         RESET INPUT
+      ===================================================== */
 
       document
         .querySelectorAll(
           "input:not([type='file']), textarea"
         )
-        .forEach(element => {
+        .forEach(
+          element => {
 
-          element.value = "";
+            element.value =
+              "";
 
-        });
+          }
+        );
 
 
-      /*
-       * Reset select
-       */
+      /* =====================================================
+         RESET TEMPLATE
+      ===================================================== */
 
       const template =
         document.getElementById(
@@ -3284,12 +3852,15 @@
       }
 
 
-      /*
-       * Reset file
-       */
+      /* =====================================================
+         RESET FILE
+      ===================================================== */
 
-      photoInput.value = "";
-      musicInput.value = "";
+      photoInput.value =
+        "";
+
+      musicInput.value =
+        "";
 
 
       photoName.textContent =
@@ -3300,9 +3871,9 @@
         "Belum ada musik";
 
 
-      /*
-       * Hapus preview
-       */
+      /* =====================================================
+         RESET PREVIEW
+      ===================================================== */
 
       const previewBox =
         document.getElementById(
@@ -3318,9 +3889,9 @@
         "";
 
 
-      /*
-       * Hapus status
-       */
+      /* =====================================================
+         RESET STATUS
+      ===================================================== */
 
       const status =
         document.getElementById(
@@ -3336,9 +3907,26 @@
         "";
 
 
-      /*
-       * Hapus data LocalStorage
-       */
+      /* =====================================================
+         HAPUS HASIL WEBSITE
+      ===================================================== */
+
+      const actions =
+        document.getElementById(
+          "generatedWebsiteActions"
+        );
+
+
+      if (actions) {
+
+        actions.remove();
+
+      }
+
+
+      /* =====================================================
+         HAPUS LOCAL STORAGE
+      ===================================================== */
 
       localStorage.removeItem(
         "queengiftOrder"
@@ -3350,21 +3938,28 @@
       );
 
 
-      /*
-       * Tutup semua accordion
-       */
+      localStorage.removeItem(
+        "queengiftLastOrder"
+      );
+
+
+      /* =====================================================
+         TUTUP ACCORDION
+      ===================================================== */
 
       document
         .querySelectorAll(
           ".page-item"
         )
-        .forEach(item => {
+        .forEach(
+          item => {
 
-          item.classList.remove(
-            "open"
-          );
+            item.classList.remove(
+              "open"
+            );
 
-        });
+          }
+        );
 
     }
 
@@ -3385,20 +3980,22 @@
 
 
         if (!saved) {
+
           return;
+
         }
 
 
         const order =
-          JSON.parse(saved);
+          JSON.parse(
+            saved
+          );
 
 
-        /*
-         * Masukkan data tersimpan
-         */
-
-        Object.keys(order)
-          .forEach(key => {
+        Object.keys(
+          order
+        ).forEach(
+          key => {
 
             const element =
               document.getElementById(
@@ -3407,8 +4004,12 @@
 
 
             if (
+
               element &&
-              typeof order[key] === "string"
+
+              typeof order[key] ===
+                "string"
+
             ) {
 
               element.value =
@@ -3416,7 +4017,8 @@
 
             }
 
-          });
+          }
+        );
 
 
       }
@@ -3451,4 +4053,5 @@
   </script>
 
 </body>
+
 </html>
